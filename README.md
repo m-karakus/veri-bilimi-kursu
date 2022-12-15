@@ -1,4 +1,4 @@
-# veri-bilimi-kursu
+# Veri Bilimi Kursu
 
 ## Unite 1 Ortamın Kurulması
 
