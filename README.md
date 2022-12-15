@@ -7,7 +7,7 @@
     - [Bölüm 1 Python - Kavramlar](#bölüm-1-python---kavramlar)
     - [Bölüm 2 Veri Dönüştürme](#bölüm-2-veri-dönüştürme)
     - [Bölüm 3 ETL (Extract, Transform and Load) - Çıkar, Dönüştür, Yükle](#bölüm-3-etl-extract-transform-and-load---çıkar-dönüştür-yükle)
-    - [Bölüm 4 PySpark - Dask - Pandas](#bölüm-4-pyspark---dask---pandas)
+    - [Bölüm 4 Büyük Veri ile İşlemler: PySpark - Dask - Pandas](#bölüm-4-büyük-veri-ile-i̇şlemler-pyspark---dask---pandas)
   - [Unite 4 Veri Görselleştirme ve İş Zekası](#unite-4-veri-görselleştirme-ve-i̇ş-zekası)
 
 ## Unite 1 Ortamın Kurulması
@@ -80,7 +80,7 @@
 - [Dagster İle ETL]()
 - [Airbyte ve Dagster ile örnek ETL Projesi]()
 
-### Bölüm 4 PySpark - Dask - Pandas
+### Bölüm 4 Büyük Veri ile İşlemler: PySpark - Dask - Pandas
 
 - [Pandas, PySpark, Dask Farkı]()
 - [PySpark Kurulumu]()
