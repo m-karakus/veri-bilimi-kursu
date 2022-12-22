@@ -1,0 +1,27 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "m-karakus",
+      "name": "Metin Karakus",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61006227?v=4",
+      "profile": "https://www.linkedin.com/in/metin-karakus-b586b6132",
+      "contributions": [
+        "infra",
+        "test",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "veri-bilimi-kursu",
+  "projectOwner": "m-karakus"
+}
