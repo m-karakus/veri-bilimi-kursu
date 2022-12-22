@@ -9,6 +9,7 @@
     - [Bölüm 3 ETL (Extract, Transform and Load) - Çıkar, Dönüştür, Yükle](#bölüm-3-etl-extract-transform-and-load---çıkar-dönüştür-yükle)
     - [Bölüm 4 Büyük Veri ile İşlemler: PySpark - Dask - Pandas](#bölüm-4-büyük-veri-ile-i̇şlemler-pyspark---dask---pandas)
   - [Unite 4 Veri Görselleştirme ve İş Zekası](#unite-4-veri-görselleştirme-ve-i̇ş-zekası)
+  - [Contributors ✨](#contributors-)
 
 ## Unite 1 Ortamın Kurulması
 
@@ -94,3 +95,23 @@
 - [Datastudio - Looker ile Veri Görselleştirme]()
 - [Looker ile Veri Görselleştirme]()
 - [Power Bı ile Veri Görselleştirme]()
+
+
+---
+
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification.
+Contributions of any kind welcome!
