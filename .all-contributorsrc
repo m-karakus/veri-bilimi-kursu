@@ -16,24 +16,6 @@
         "test",
         "code"
       ]
-    },
-    {
-      "login": "jakebolam",
-      "name": "Jake Bolam",
-      "avatar_url": "https://avatars.githubusercontent.com/u/3534236?v=4",
-      "profile": "https://jakebolam.com",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "metintest3",
-      "name": "metintest3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/121252695?v=4",
-      "profile": "https://github.com/metintest3",
-      "contributions": [
-        "code"
-      ]
     }
   ],
   "contributorsPerLine": 7,
