@@ -113,19 +113,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center"><a href="https://www.linkedin.com/in/metin-karakus-b586b6132"><img src="https://avatars.githubusercontent.com/u/61006227?v=4?s=100" width="100px;" alt="Metin Karakus"/><br /><sub><b>Metin Karakus</b></sub></a><br /><a href="#infra-m-karakus" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=m-karakus" title="Tests">⚠️</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=m-karakus" title="Code">💻</a></td>
-      <td align="center"><a href="https://jakebolam.com"><img src="https://avatars.githubusercontent.com/u/3534236?v=4?s=100" width="100px;" alt="Jake Bolam"/><br /><sub><b>Jake Bolam</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=jakebolam" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
