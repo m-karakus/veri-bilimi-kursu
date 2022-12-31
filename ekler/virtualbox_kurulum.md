@@ -2,6 +2,8 @@
 
 ## Snap Shot Almayı unutmayın
 
+Video Link: <https://youtu.be/gQtZbUX2zHQ>
+
 ## Dosya Paylaşımı
 
 1. Bilgisayarı Başlat
@@ -9,9 +11,8 @@
 3. Yeni bir dosya ekle
 4. Dosya adına `codes` yaz
 5. `Permanent` alanı seçili olsun, diğerlerini kaldır.
-6. Bilgisayarı başlat
-7. Devices -> Insert Guest Additions CD image menüsüne tıkla ve CD yi bilgisayara takmış ol.
-8. Terminalden aşağıdaki komutları çalıştır.
+6. Devices -> Insert Guest Additions CD image menüsüne tıkla ve CD yi bilgisayara takmış ol.
+7. Terminalden aşağıdaki komutları çalıştır.
 
     ```bash
     sudo mount /dev/cdrom /media/cdrom
@@ -21,7 +22,7 @@
     sudo reboot
     ```
 
-9. Bilgisayar yeniden başlatılacak. Sonrasında aşağıdaki kodlara devam edelim. 
+8. Bilgisayar yeniden başlatılacak. Sonrasında aşağıdaki kodlara devam edelim. 
 
     ```bash
     mkdir ~/codes
@@ -29,32 +30,32 @@
     cd ~/codes
     ```
 
-10. Dosya yolunu kalıcı kale getirelim. 
+9.  Dosya yolunu kalıcı kale getirelim. 
 
     ```bash
     whoami
     sudo nano /etc/fstab
     ```
 
-11. Açılan Pencerede aşağıdaki satırları ekleyelim ve Ctrl+O ile kaydedelim vd Ctrl+x ile kapatalım
+10. Açılan Pencerede aşağıdaki satırları ekleyelim ve Ctrl+O ile kaydedelim vd Ctrl+x ile kapatalım
 
     ```bash
     codes	/home/<username>/codes	vboxsf	defaults	0	0
     ```
 
-12. Modülleri düzeltmek için aşağıdaki kodu terminalde çalıştıralım. 
+11. Modülleri düzeltmek için aşağıdaki kodu terminalde çalıştıralım. 
 
     ```bash
     sudo nano /etc/modules
     ```
 
-13. `/etc/modules` dosyası açılacaktır, yeni bir satıra aşağıdaki yazıyı ekleyelim ve kaydedelim.
+12. `/etc/modules` dosyası açılacaktır, yeni bir satıra aşağıdaki yazıyı ekleyelim ve kaydedelim.
 
     ```bash
     vboxsf
     ```
 
-14. Bilgisayarı yeniden başlaralım. 
+13. Bilgisayarı yeniden başlaralım. 
 
     ```bash
     sudo reboot
