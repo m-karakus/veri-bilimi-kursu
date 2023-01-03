@@ -12,7 +12,13 @@ Video Link: <https://youtu.be/gQtZbUX2zHQ>
 4. Dosya adına `codes` yaz
 5. `Permanent` vs `Auto-mount` alanı seçili olsun, diğerini kaldır.
 6. Devices -> Insert Guest Additions CD image menüsüne tıkla ve CD yi bilgisayara takmış ol.
-7. Terminalden aşağıdaki komutları çalıştır.
+7. Kullanıcıya yetki verelim.
+
+    ```bash
+    sudo adduser $USER vboxsf
+    ```
+
+8. Terminalden aşağıdaki komutları çalıştır.
 
     ```bash
     sudo mount /dev/cdrom /media/cdrom
@@ -21,12 +27,6 @@ Video Link: <https://youtu.be/gQtZbUX2zHQ>
     sudo apt-get install build-essential linux-headers-`uname -r`
     sudo /media/cdrom/./autorun.sh
     sudo reboot
-    ```
-
-8. Kullanıcıya yetki verelim.
-
-    ```bash
-    sudo adduser $USER vboxsf
     ```
 
 9. Bilgisayar yeniden başlatılacak. Sonrasında aşağıdaki kodlara devam edelim. 
