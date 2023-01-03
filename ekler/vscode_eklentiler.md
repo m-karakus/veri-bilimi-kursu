@@ -1,5 +1,7 @@
 # VScode eklentiler
 
+Visual Studio Code'u aç, `Ctrl + p` tuş kombinasyonuna bas.Aşağıdaki satırlardan birini yapıştır ve `Enter` a bas.
+
 1. ext install Surendrajat.apklab
 2. ext install ms-mssql.data-workspace-vscode
 3. ext install ms-azuretools.vscode-docker
