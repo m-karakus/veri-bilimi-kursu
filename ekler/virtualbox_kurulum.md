@@ -37,8 +37,4 @@ Video Link: <https://youtu.be/gQtZbUX2zHQ>
     touch test.txt
     ```
 
-10. Bilgisayarı yeniden başlaralım.
-
-    ```bash
-    sudo reboot
-    ```
+10. Snapshot alalım.
