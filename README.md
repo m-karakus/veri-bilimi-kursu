@@ -19,7 +19,7 @@
 - [Git ve Github Kurulumu](https://www.youtube.com/watch?v=mHP2YnD9J-U)
 - [Virtual Box Kurulumu](https://www.youtube.com/watch?v=EH-354H0ne8)
 - [Virtual Box üzerine Linux Lite kurulumu](./ekler/virtualbox_kurulum.md)
-- [Vs Code Programının indirilmesi ve Senkronizasyon ayarları]()
+- [Vs Code Programının indirilmesi ve Senkronizasyon ayarları](./ekler/vscode_eklentiler.md)
 - [Docker ve Docker Compose Kurulumu]()
 
 

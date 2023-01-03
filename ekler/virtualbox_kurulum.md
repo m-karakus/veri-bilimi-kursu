@@ -2,7 +2,10 @@
 
 ## Snap Shot Almayı unutmayın
 
-Video Link: <https://youtu.be/gQtZbUX2zHQ>
+Video Link:
+
+1. <https://youtu.be/gQtZbUX2zHQ>  
+2. <https://www.youtube.com/watch?v=AssADj1RJ5U>
 
 ## Dosya Paylaşımı (Güncellendi 2023-01-03)
 
