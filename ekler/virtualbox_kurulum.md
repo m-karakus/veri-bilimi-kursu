@@ -4,7 +4,7 @@
 
 Video Link: <https://youtu.be/gQtZbUX2zHQ>
 
-## Dosya Paylaşımı
+## Dosya Paylaşımı (Güncellendi 2023-01-03)
 
 1. Bilgisayarı Başlat
 2. Devices -> Shared Folders (Paylaşılan Klasorler) alanına git
