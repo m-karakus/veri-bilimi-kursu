@@ -10,52 +10,34 @@ Video Link: <https://youtu.be/gQtZbUX2zHQ>
 2. Devices -> Shared Folders (Paylaşılan Klasorler) alanına git
 3. Yeni bir dosya ekle
 4. Dosya adına `codes` yaz
-5. `Permanent` alanı seçili olsun, diğerlerini kaldır.
+5. `Permanent` vs `Auto-mount` alanı seçili olsun, diğerini kaldır.
 6. Devices -> Insert Guest Additions CD image menüsüne tıkla ve CD yi bilgisayara takmış ol.
 7. Terminalden aşağıdaki komutları çalıştır.
 
     ```bash
     sudo mount /dev/cdrom /media/cdrom
     sudo apt-get update
+    sudo apt-get upgrade
     sudo apt-get install build-essential linux-headers-`uname -r`
-    sudo /media/cdrom/./VBoxLinuxAdditions.run
+    sudo /media/cdrom/./autorun.sh
     sudo reboot
     ```
 
-8. Bilgisayar yeniden başlatılacak. Sonrasında aşağıdaki kodlara devam edelim. 
+8. Kullanıcıya yetki verelim.
 
     ```bash
-    mkdir ~/codes
-    sudo mount -t vboxsf codes ~/codes
+    sudo adduser $USER vboxsf
+    ```
+
+9. Bilgisayar yeniden başlatılacak. Sonrasında aşağıdaki kodlara devam edelim. 
+
+    ```bash
+    ln -s /media/sf_codes ~/codes
     cd ~/codes
+    touch test.txt
     ```
 
-9.  Dosya yolunu kalıcı kale getirelim. 
-
-    ```bash
-    whoami
-    sudo nano /etc/fstab
-    ```
-
-10. Açılan Pencerede aşağıdaki satırları ekleyelim ve Ctrl+O ile kaydedelim vd Ctrl+x ile kapatalım
-
-    ```bash
-    codes	/home/<username>/codes	vboxsf	defaults	0	0
-    ```
-
-11. Modülleri düzeltmek için aşağıdaki kodu terminalde çalıştıralım. 
-
-    ```bash
-    sudo nano /etc/modules
-    ```
-
-12. `/etc/modules` dosyası açılacaktır, yeni bir satıra aşağıdaki yazıyı ekleyelim ve kaydedelim.
-
-    ```bash
-    vboxsf
-    ```
-
-13. Bilgisayarı yeniden başlaralım. 
+10. Bilgisayarı yeniden başlaralım.
 
     ```bash
     sudo reboot
