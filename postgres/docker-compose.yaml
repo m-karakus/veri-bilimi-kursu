@@ -14,15 +14,18 @@ services :
       - ./db-data:/var/lib/postgresql/data
       - ./dbscripts:/docker-entrypoint-initdb.d
 
-  adminer:
-    image: adminer
-    restart: unless-stopped
-    depends_on: 
-      - db
-    ports:
-      - 8080:8080
-    # network_mode: host
+  # # adminer tool 
+  # adminer:
+  #   image: adminer
+  #   container_name: adminer
+  #   restart: unless-stopped
+  #   depends_on: 
+  #     - db
+  #   ports:
+  #     - 8080:8080
+  #   # network_mode: host
 
+  # pgadmin tool 
   pgadmin4:
     image: dpage/pgadmin4
     container_name: pgadmin4
