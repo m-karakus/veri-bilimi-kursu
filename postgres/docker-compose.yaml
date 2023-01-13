@@ -11,8 +11,8 @@ services :
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
     volumes: 
-      - ./db-data:/var/lib/postgresql/data
-      - ./dbscripts:/docker-entrypoint-initdb.d
+      - db-data:/var/lib/postgresql/data
+      # - ./dbscripts:/docker-entrypoint-initdb.d
 
   # # adminer tool 
   # adminer:
@@ -39,3 +39,5 @@ services :
       - db
     # network_mode: host
 
+volumes:
+  db-data:
