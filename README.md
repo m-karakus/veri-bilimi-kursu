@@ -26,7 +26,7 @@
 ## Unite 2 SQL ve Veri Tabanları
 
 - [Veri Tabanı Nedir? Veri Tabanı tipleri]()
-- [Veri Tabanı Oluşturma]()
+- [Veri Tabanı Oluşturma](./postgres/postgrest.md)
 - [Google Cloud Ayarlarının yapılması ve Bigquery'e giriş]()
 - [SQL Sonuçlarını görmek]()
 - [SQL Komutları]()
