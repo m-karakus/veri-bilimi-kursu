@@ -2,7 +2,7 @@
 
 Veri tabanı adı : `dvdrental`
 
-Video: <>
+Video: <https://youtu.be/Ez0kpFdbtm0>
 
 Code:
 
