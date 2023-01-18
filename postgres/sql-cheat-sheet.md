@@ -4,4 +4,4 @@
 ![ch3](./ch3.jpeg)
 ![ch2](./ch2.jpeg)
 
-[PDF]("./ch1.pdf")
+[PDF](./ch1.pdf)
