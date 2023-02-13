@@ -29,6 +29,7 @@ services :
   pgadmin4:
     image: dpage/pgadmin4
     container_name: pgadmin4
+    restart: unless-stopped
     environment:
       - PGADMIN_DEFAULT_EMAIL=youremail@whatever.com
       - PGADMIN_DEFAULT_PASSWORD=password
