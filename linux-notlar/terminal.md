@@ -1,11 +1,6 @@
 # Terminal Güncelleme
 
 ```bash
-ssh-keygen -t rsa -b 4096 -C "github" && cat ~/.ssh/id_rsa.pub 
-```
-
-
-```bash
 sudo apt install vim git curl zsh && \
 chsh -s /bin/zsh && \
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
