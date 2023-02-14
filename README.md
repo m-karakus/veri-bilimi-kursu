@@ -14,6 +14,7 @@
   - [Unite 4 Veri Görselleştirme ve İş Zekası](#unite-4-veri-görselleştirme-ve-i̇ş-zekası)
   - [Contributors ✨](#contributors-)
 
+
 ## Unite 1 Ortamın Kurulması
 
 - [Git ve Github Kurulumu](https://www.youtube.com/watch?v=mHP2YnD9J-U)
