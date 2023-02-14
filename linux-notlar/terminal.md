@@ -10,3 +10,4 @@ sed 's/\(^plugins=([^)]*\)/\1 zsh-autosuggestions zsh-syntax-highlighting/' .zsh
 ```
 
 
+<https://gparted.org/download.php>
