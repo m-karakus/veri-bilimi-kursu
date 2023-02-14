@@ -1,13 +1,13 @@
 #!/bin/bash
 # Read Password
-echo -n Password: 
-read -s password
-echo
+# echo -n Password: 
+# read -s password
+# echo
 
 sudo apt install vim git curl zsh -y
-echo $password
+# echo $password
 sudo chsh -s $(which zsh) $(whoami)
-echo $password
+# echo $password
 
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash && \
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \
