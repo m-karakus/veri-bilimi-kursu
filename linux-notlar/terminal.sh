@@ -6,7 +6,7 @@ echo
 
 sudo apt install vim git curl zsh -y
 echo $password
-chsh -s /bin/zsh
+sudo chsh -s $(which zsh) $(whoami)
 echo $password
 
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash && \
