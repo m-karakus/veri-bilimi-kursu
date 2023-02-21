@@ -1,6 +1,6 @@
 # Veri Bilimi Kursu
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 - [Veri Bilimi Kursu](#veri-bilimi-kursu)
@@ -113,9 +113,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="https://www.linkedin.com/in/metin-karakus-b586b6132"><img src="https://avatars.githubusercontent.com/u/61006227?v=4?s=100" width="100px;" alt="Metin Karakus"/><br /><sub><b>Metin Karakus</b></sub></a><br /><a href="#infra-m-karakus" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=m-karakus" title="Tests">⚠️</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=m-karakus" title="Code">💻</a></td>
-      <td align="center"><a href="https://github.com/kadirkatirci"><img src="https://avatars.githubusercontent.com/u/107984688?v=4?s=100" width="100px;" alt="kadirkatirci"/><br /><sub><b>kadirkatirci</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=kadirkatirci" title="Code">💻</a></td>
-      <td align="center"><a href="https://github.com/kabalidevercan"><img src="https://avatars.githubusercontent.com/u/103073901?v=4?s=100" width="100px;" alt="Ercan Kabalı"/><br /><sub><b>Ercan Kabalı</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=kabalidevercan" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/metin-karakus-b586b6132"><img src="https://avatars.githubusercontent.com/u/61006227?v=4?s=100" width="100px;" alt="Metin Karakus"/><br /><sub><b>Metin Karakus</b></sub></a><br /><a href="#infra-m-karakus" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=m-karakus" title="Tests">⚠️</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=m-karakus" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kadirkatirci"><img src="https://avatars.githubusercontent.com/u/107984688?v=4?s=100" width="100px;" alt="kadirkatirci"/><br /><sub><b>kadirkatirci</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=kadirkatirci" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kabalidevercan"><img src="https://avatars.githubusercontent.com/u/103073901?v=4?s=100" width="100px;" alt="Ercan Kabalı"/><br /><sub><b>Ercan Kabalı</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=kabalidevercan" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/medinetemel"><img src="https://avatars.githubusercontent.com/u/47544705?v=4?s=100" width="100px;" alt="medinetemel"/><br /><sub><b>medinetemel</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3Amedinetemel" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=medinetemel" title="Code">💻</a> <a href="#data-medinetemel" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
