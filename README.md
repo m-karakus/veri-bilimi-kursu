@@ -28,7 +28,7 @@
 
 - [Veri Tabanı Nedir? Veri Tabanı tipleri](https://www.youtube.com/watch?v=BqlIB-TJiNw)
 - [Veri Tabanı Oluşturma](./postgres/postgrest.md)
-- [Google Cloud Ayarlarının yapılması ve Bigquery'e giriş]()
+- [Google Cloud Ayarlarının yapılması ve Bigquery'e giriş](https://youtube.com/watch?v=JeSKgXkCTHU&si=EnSIkaIECMiOmarE)
 - [SQL Sonuçlarını görmek](https://youtube.com/watch?v=UxZb4cmzwxY&si=EnSIkaIECMiOmarE)
 - [SQL Komutları](https://youtube.com/watch?v=YTT0utDyKeY&si=EnSIkaIECMiOmarE)
 - [SQL CRUD İşlemleri](https://youtube.com/watch?v=0XGSlAsyzoU&si=EnSIkaIECMiOmarE)
@@ -36,8 +36,8 @@
 - [SQL'de Tabloları bağlama - JOIN](https://youtube.com/watch?v=z1VtVGqFESo&si=EnSIkaIECMiOmarE)
 - [SQL'de Hesaplama - Gruplama İşlemleri](https://youtube.com/watch?v=SNJy_38C7Bg&si=EnSIkaIECMiOmarE)
 - [SQL'de Hazır Fonksiyonlar](https://youtube.com/watch?v=MDmJUMt_19o&si=EnSIkaIECMiOmarE)
-- [SQL'de Tablo Oluşturma]()
-- [SQL'de CTE(common table expression) Nedir ve Nasıl kullanılır?]() 
+- [SQL'de Tablo Oluşturma](https://youtube.com/watch?v=JeSKgXkCTHU&si=EnSIkaIECMiOmarE)
+- [SQL'de CTE(common table expression) Nedir ve Nasıl kullanılır?](https://youtube.com/watch?v=JeSKgXkCTHU&si=EnSIkaIECMiOmarE) 
 
 ## Unite 3 Python Ile Programlama
 
