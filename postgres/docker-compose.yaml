@@ -11,10 +11,10 @@ services :
       POSTGRES_USER: ${PGUSER:-postgres}
       POSTGRES_PASSWORD: ${PGPASSWORD:-postgres}
       POSTGRES_DB: ${PGDB:-postgres}
-      # PGDATA: /var/lib/postgresql/data/ <--- Check this out
+      # PGDATA: /var/lib/postgresql/data/ # <-- Check this out
     volumes: 
-      - db-data:/var/lib/postgresql/data/:rw
-      # - ${POSTGRES_DATA}:/var/lib/postgresql/data/:rw
+      # - db-data:/var/lib/postgresql/data/:rw  # <-- this is for named volumes
+      - ${POSTGRES_DATA-./postgres_data}:/var/lib/postgresql/data/:rw # <-- this is for bind volume
       # - ./dbscripts:/docker-entrypoint-initdb.d
 
   # # adminer tool
@@ -44,10 +44,11 @@ services :
       - db
     # network_mode: host
 
-volumes:
-  db-data:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: /home/mk/postgres_data #NOTE needs full path (~ doesn't work)
+# # if you want to use named volue uncomment this
+# volumes:
+#   db-data:
+#     driver: local
+#     driver_opts:
+#       type: none
+#       o: bind
+#       device: ${PWD}/postgres_data #NOTE needs full path (~ doesn't work)
