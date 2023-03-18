@@ -1,20 +1,23 @@
 version: '3.8'
 services :
   db:
+    # image: postgres:latest
     image: postgres
     container_name: pg_container
     restart: unless-stopped
     ports:
-      - "5432:5432"
+      - "${PGPORT:-5432}:${PGPORT:-5432}"
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: postgres
+      POSTGRES_USER: ${PGUSER:-postgres}
+      POSTGRES_PASSWORD: ${PGPASSWORD:-postgres}
+      POSTGRES_DB: ${PGDB:-postgres}
+      # PGDATA: /var/lib/postgresql/data/ <--- Check this out
     volumes: 
-      - db-data:/var/lib/postgresql/data
+      - db-data:/var/lib/postgresql/data/:rw
+      # - ${POSTGRES_DATA}:/var/lib/postgresql/data/:rw
       # - ./dbscripts:/docker-entrypoint-initdb.d
 
-  # # adminer tool 
+  # # adminer tool
   # adminer:
   #   image: adminer
   #   container_name: adminer
@@ -25,20 +28,26 @@ services :
   #     - 8080:8080
   #   # network_mode: host
 
-  # pgadmin tool 
+  # pgadmin tool
+
   pgadmin4:
     image: dpage/pgadmin4
     container_name: pgadmin4
     restart: unless-stopped
     environment:
-      - PGADMIN_DEFAULT_EMAIL=youremail@whatever.com
-      - PGADMIN_DEFAULT_PASSWORD=password
+      - PGADMIN_DEFAULT_EMAIL=metin_karakus@yahoo.com
+      - PGADMIN_DEFAULT_PASSWORD=passwd
       - PGADMIN_LISTEN_PORT=5050
     ports:
-      - "5050:5050"
-    depends_on: 
+      - "${PGADMIN_PORT:-5050}:${PGADMIN_PORT:-5050}"
+    depends_on:
       - db
     # network_mode: host
 
 volumes:
   db-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/mk/postgres_data #NOTE needs full path (~ doesn't work)
