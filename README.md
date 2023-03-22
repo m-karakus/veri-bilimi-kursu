@@ -1,6 +1,6 @@
 # Veri Bilimi Kursu
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 - [Veri Bilimi Kursu](#veri-bilimi-kursu)
@@ -117,6 +117,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kadirkatirci"><img src="https://avatars.githubusercontent.com/u/107984688?v=4?s=100" width="100px;" alt="kadirkatirci"/><br /><sub><b>kadirkatirci</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=kadirkatirci" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kabalidevercan"><img src="https://avatars.githubusercontent.com/u/103073901?v=4?s=100" width="100px;" alt="Ercan Kabalı"/><br /><sub><b>Ercan Kabalı</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=kabalidevercan" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/medinetemel"><img src="https://avatars.githubusercontent.com/u/47544705?v=4?s=100" width="100px;" alt="medinetemel"/><br /><sub><b>medinetemel</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3Amedinetemel" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=medinetemel" title="Code">💻</a> <a href="#data-medinetemel" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/erfatih"><img src="https://avatars.githubusercontent.com/u/113780890?v=4?s=100" width="100px;" alt="Fatih ER"/><br /><sub><b>Fatih ER</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=erfatih" title="Code">💻</a> <a href="#data-erfatih" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
