@@ -95,10 +95,11 @@
 
 ## Unite 4 Veri Görselleştirme ve İş Zekası
 
-- [Google Shees ile Veri Görselleştirme]()
-- [Datastudio - Looker ile Veri Görselleştirme]()
+- [Google Shees ile Veri Görselleştirme](https://www.youtube.com/watch?v=HXfCNI-JDYc)
+- [Datastudio - Looker ile Veri Görselleştirme](https://www.youtube.com/watch?v=DbOAlkvWEFI)
 - [Looker ile Veri Görselleştirme]()
-- [Power Bı ile Veri Görselleştirme]()
+- [Power Bı ile Veri Görselleştirme](https://www.youtube.com/watch?v=qcB75opF9rg&list=PLanC6OPLYlCYW_hLru-GZcfgMHaaIoe-b&index=35)
+- [Apache Superset Veri Görselleştirme](https://www.youtube.com/watch?v=7zfnaVVue9Y)
 
 
 ---
