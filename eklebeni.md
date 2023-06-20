@@ -4,4 +4,5 @@ Kadir KATIRCI
 Ercan Kabalı 
 Medine Temel  
 Fatih ER  
-Enescan Öztürk
+Enescan Öztürk  
+Deniz Can Tokpunar
