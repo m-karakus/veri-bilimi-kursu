@@ -64,6 +64,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "denizct",
+      "name": "Deniz Can Tokpunar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/137150596?v=4",
+      "profile": "https://github.com/denizct",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -71,5 +80,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "projectName": "veri-bilimi-kursu",
-  "projectOwner": "m-karakus"
+  "projectOwner": "m-karakus",
+  "commitType": "docs"
 }
