@@ -1,6 +1,6 @@
 # Veri Bilimi Kursu
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 - [Veri Bilimi Kursu](#veri-bilimi-kursu)
@@ -121,6 +121,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/erfatih"><img src="https://avatars.githubusercontent.com/u/113780890?v=4?s=100" width="100px;" alt="Fatih ER"/><br /><sub><b>Fatih ER</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=erfatih" title="Code">💻</a> <a href="#data-erfatih" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ozturk-enes"><img src="https://avatars.githubusercontent.com/u/130938721?v=4?s=100" width="100px;" alt="ozturk-enes"/><br /><sub><b>ozturk-enes</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=ozturk-enes" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/denizct"><img src="https://avatars.githubusercontent.com/u/137150596?v=4?s=100" width="100px;" alt="Deniz Can Tokpunar"/><br /><sub><b>Deniz Can Tokpunar</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=denizct" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/tarimdazeka"><img src="https://avatars.githubusercontent.com/u/138719920?v=4?s=100" width="100px;" alt="Tarimdazeka"/><br /><sub><b>Tarimdazeka</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3Atarimdazeka" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=tarimdazeka" title="Code">💻</a> <a href="#data-tarimdazeka" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>

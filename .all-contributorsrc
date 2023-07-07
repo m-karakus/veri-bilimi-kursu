@@ -73,6 +73,17 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "tarimdazeka",
+      "name": "Tarimdazeka",
+      "avatar_url": "https://avatars.githubusercontent.com/u/138719920?v=4",
+      "profile": "https://github.com/tarimdazeka",
+      "contributions": [
+        "bug",
+        "code",
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
