@@ -6,3 +6,4 @@ Medine Temel
 Fatih ER  
 Enescan Öztürk  
 Deniz Can Tokpunar
+tarimdazeka  
