@@ -43,15 +43,15 @@
 
 ### Bölüm 1 Python - Kavramlar
 
-- [Python indirme]()
+- [Python indirme](https://youtu.be/npN2xyngkcA)
 - [Python Sanal Ortamını oluşturmak]()
 - [Git Reposu uluşturmak]()
 - [Git'de Branch Yapısı]()
-- [Pyhon'da Değişken Tipleri ve Değişken Tanımlama]()
-- [Python'da Aritmatik ve Mantıksal İşlemler]()
-- [Python'da Döngüler]()
-- [Python Arrays - Temel tip diziler]()
-- [Python Mutable and Immutable Arrays - Değişken ve Sabit Diziler]()
+- [Pyhon'da Değişken Tipleri ve Değişken Tanımlama](https://youtu.be/BJletCmGN6E)
+- [Python'da Aritmatik ve Mantıksal İşlemler](https://youtu.be/8jaliuPUijM)
+- [Python'da Döngüler](https://youtu.be/CHKX3ghD8Mg)
+- [Python Arrays - Temel tip diziler](https://youtu.be/8b7gzO_252U)
+- [Python Mutable and Immutable Arrays - Değişken ve Sabit Diziler](https://youtu.be/dzurkz-A61w)
 - [Python Dictionary - Sözlükler]()
 - [Python Iteration - Yineleme: Veri Yapılarında Döngü]()
 - [Python'da fonksiyonlar ve fonksiyon tipleri]()
