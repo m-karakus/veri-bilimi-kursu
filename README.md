@@ -45,17 +45,17 @@
 
 - [Python indirme](https://youtu.be/npN2xyngkcA)
 - [Python Sanal Ortamını oluşturmak]()
-- [Git Reposu uluşturmak]()
-- [Git'de Branch Yapısı]()
+- [Git Reposu uluşturmak](https://youtu.be/mHP2YnD9J-U)
+- [Git'de Branch Yapısı](https://youtu.be/mHP2YnD9J-U)
 - [Pyhon'da Değişken Tipleri ve Değişken Tanımlama](https://youtu.be/BJletCmGN6E)
 - [Python'da Aritmatik ve Mantıksal İşlemler](https://youtu.be/8jaliuPUijM)
 - [Python'da Döngüler](https://youtu.be/CHKX3ghD8Mg)
 - [Python Arrays - Temel tip diziler](https://youtu.be/8b7gzO_252U)
 - [Python Mutable and Immutable Arrays - Değişken ve Sabit Diziler](https://youtu.be/dzurkz-A61w)
-- [Python Dictionary - Sözlükler]()
-- [Python Iteration - Yineleme: Veri Yapılarında Döngü]()
-- [Python'da fonksiyonlar ve fonksiyon tipleri]()
-- [Python Classes & Objects - Sınıflar ve Objeler]()
+- [Python Dictionary - Sözlükler](https://www.youtube.com/watch?v=WbBsfy5_DiM)
+- [Python Iteration - Yineleme: Veri Yapılarında Döngü](https://youtu.be/CHKX3ghD8Mg?si=VNlSKNGX6F5rGcwS)
+- [Python'da fonksiyonlar ve fonksiyon tipleri](https://youtu.be/jfxu3nqsQU4?si=5Y-1KJGB8Q-VoSKv)
+- [Python Classes & Objects - Sınıflar ve Objeler](https://youtu.be/7TY9BDKhmFg?si=ry4MXaKCPh0yYr3O)
 
 ### Bölüm 2 Veri Dönüştürme
 - [İstatistiksel Bakış]()
