@@ -5,3 +5,4 @@ df = pytrends.trending_searches(pn='turkey') #daily search term
 column_names = ['Topic']
 df.columns = column_names
 print(df)
+
