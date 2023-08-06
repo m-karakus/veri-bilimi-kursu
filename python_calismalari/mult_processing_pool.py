@@ -1,11 +1,26 @@
+from multiprocessing import Pool
+import time
+
 def f(n):
+    c = 0
+    for i in range(1000):
+        c = c + (i*i)
     return n*n
 
 if __name__ == "__main__":
-    array = [1,2,3,4,5]
+    baslangic_zamani = time.time()
+    array = range(10000)
+
+    p = Pool(processes=3)
+
+    # sonuc = p.map(f,array)
+    # p.close()
+    # p.join()
 
     sonuc = []
     for n in array:
         sonuc.append(f(n))
 
-    print(sonuc)
+    # print(sonuc)
+    bitis_zamani = time.time()
+    print("Bitti! Toplam süre:", (bitis_zamani-baslangic_zamani),"sn")
