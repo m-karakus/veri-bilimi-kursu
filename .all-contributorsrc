@@ -84,6 +84,17 @@
         "code",
         "data"
       ]
+    },
+    {
+      "login": "onrert",
+      "name": "onrert",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59202930?v=4",
+      "profile": "https://github.com/onrert",
+      "contributions": [
+        "bug",
+        "code",
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
