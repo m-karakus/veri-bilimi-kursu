@@ -67,8 +67,8 @@
   - A/B Testing
   - Linear Regression
   - Model Evaluation
-- [NumPy Nedir?]()
-- [NumPy ile Ornekler]()
+- [NumPy Nedir?](https://www.youtube.com/playlist?list=PLanC6OPLYlCZosNT_o3p2-j1LREzWwpJp)
+- [NumPy ile Ornekler](https://www.youtube.com/playlist?list=PLanC6OPLYlCZosNT_o3p2-j1LREzWwpJp)
 - [DataFrames - Veri Çerçeveleri]()
 - [Pandas ile örnekler]()
 - [Python ile Veri Görselleştirme]()
