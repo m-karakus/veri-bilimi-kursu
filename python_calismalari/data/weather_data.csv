@@ -1,4 +1,4 @@
-gün,şehir,sıcaklık,rüzgar,tahmin
+day,city,temperature,windspeed,event
 2023-01-01,new york,32,6,yağmurlu
 2023-01-02,new york,36,7,güneşli
 2023-01-03,new york,28,12,karlı
