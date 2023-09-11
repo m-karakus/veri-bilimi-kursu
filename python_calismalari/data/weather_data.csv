@@ -1,0 +1,13 @@
+gün,şehir,sıcaklık,rüzgar,tahmin
+2023-01-01,new york,32,6,yağmurlu
+2023-01-02,new york,36,7,güneşli
+2023-01-03,new york,28,12,karlı
+2023-01-04,new york,33,7,güneşli
+2023-01-01,mumbai,90,5,güneşli
+2023-01-02,mumbai,85,12,sisli
+2023-01-03,mumbai,87,15,sisli
+2023-01-04,mumbai,92,5,yağmurlu
+2023-01-01,paris,45,20,güneşli
+2023-01-02,paris,50,13,bulutlu
+2023-01-03,paris,54,8,bulutlu
+2023-01-04,paris,42,10,bulutlu
