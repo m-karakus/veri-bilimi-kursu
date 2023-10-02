@@ -9,4 +9,4 @@ Deniz Can Tokpunar
 tarimdazeka  
 Onur Mert Ertugrul  
 Sedatcan Kalkan  
-R Emrah GÖkkaya  
+R Emrah Gökkaya  
