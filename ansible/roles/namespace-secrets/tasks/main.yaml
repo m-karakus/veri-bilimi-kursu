@@ -1,0 +1,19 @@
+---
+- name: Delete Name Spaces...
+  ignore_errors: yes
+  shell: |
+        kubectl delete namespace {{ item }}
+  with_items: "{{ kubernetes_namespaces }}"
+
+- name: Create Name Spaces...
+  ignore_errors: yes
+  shell: |
+        kubectl create namespace {{ item }} 
+  with_items: "{{ kubernetes_namespaces }}"
+
+- name: Create Name Secrets...
+  ignore_errors: yes
+  shell: |
+        kubectl apply -f $HOME/kube_setup/registrypullsecret.yaml -n {{ item }} \
+        && kubectl patch serviceaccount default -p '{"imagePullSecrets": [{"name": "registrypullsecret"}]}' -n {{ item }}
+  with_items: "{{ kubernetes_namespaces }}"

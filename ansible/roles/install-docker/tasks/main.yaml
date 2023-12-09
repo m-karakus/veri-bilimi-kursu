@@ -1,0 +1,48 @@
+---
+# tasks file for install-docker-packages
+- name: Add Docker GPG apt Key
+  become: true
+  apt_key:
+    url: "{{ docker_apt_gpg_key }}"
+    state: present
+
+- name: Add Docker Repository
+  become: true
+  apt_repository:
+    repo: "{{ docker_apt_repository }}"
+    state: present
+    update_cache: true
+
+- name: Installing Docker
+  become: true
+  apt:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-compose-plugin
+      - docker-buildx-plugin 
+    state: present
+    update_cache: true
+
+- name: Adding users to group docker
+  become: true
+  user:
+    name: ansible
+    groups: docker
+    append: yes
+
+- name: Enabling Docker...
+  become: true
+  service:
+    name: docker
+    enabled: true
+  notify: Restart Docker
+
+- name: Install Docker Modules for Python
+  pip:
+    name: 
+      - docker
+      - docker-compose
+  notify: Restart Server
+

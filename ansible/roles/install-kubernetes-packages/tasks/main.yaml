@@ -1,0 +1,23 @@
+---
+# tasks file for install-kubernetes-packages
+
+- name: Adding kubernetes apt-key
+  become: true
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
+
+- name: Adding kubernetes APT repository
+  become: true
+  apt_repository:
+    repo: deb http://apt.kubernetes.io/ kubernetes-xenial main
+    state: present
+    filename: 'kubernetes'
+
+- name: Install Required Packages for Kubernetes
+  become: true
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: true
+  with_items: "{{ kubernetes_packages }}"

@@ -1,0 +1,7 @@
+- local_action: 
+    module: copy 
+    content: "{{ hostvars['kubemaster1']['kube_git_repo'] }}"
+    dest: debug.json
+
+- debug:
+    msg: "{{ hostvars['kubemaster1']['join_command'] }}"

@@ -1,0 +1,27 @@
+---
+- name: Add Cert-Manager Repo to the Helm...
+  shell: |
+        helm repo add jetstack https://charts.jetstack.io
+        helm repo update
+
+- name: Deploy Cert-Manager...
+  shell: |
+        helm upgrade --install \
+        cert-manager jetstack/cert-manager \
+        --namespace cert-manager \
+        --create-namespace \
+        --version v1.13.2 \
+        --set installCRDs=true
+
+- name: Create Token and Issuer...
+  shell: |
+        cd /home/ansible/kube_setup/certmanager
+        kubectl apply -f 01_secret_cloudflare.yaml
+        kubectl apply -f 02_clusterissuer_acme.yaml
+
+- name: Create Name Spaces...
+  ignore_errors: yes
+  shell: |
+        cd /home/ansible/kube_setup/certmanager
+        kubectl apply -f 03_cert_production.yaml -n {{ item }}
+  with_items: "{{ kubernetes_namespaces }}"

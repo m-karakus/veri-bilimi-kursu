@@ -1,0 +1,124 @@
+- name: Installing required packages on all hosts...
+  hosts: all
+  roles:
+    - install-required-packages
+
+- name: Installing kubernetes packages on all hosts...
+  hosts: all
+  roles:
+    - install-kubernetes-packages
+
+- name: Disabling swap on all hosts...
+  hosts: all
+  roles:
+    - disable-swap
+
+- name: Install docker on all hosts...
+  hosts: all
+  roles:
+    - install-docker
+
+- name: Configuring networks on hosts...
+  hosts: all
+  roles:
+    - configure-network-rules
+
+- name: Deploy WireGuard VPN...
+  hosts: all
+  roles:
+    - deploy-wireguard
+
+- name: Copy Files to all...
+  hosts: all
+  roles:
+    - copy-files
+
+- name: Copy SSH Deploy Keys to the master...
+  hosts: kubemaster
+  roles:
+    - ssh-keys
+
+- name: Starting installation of Helm...
+  hosts: kubemaster
+  roles:
+    - install-helm
+
+- name: Deploying kubernetes cluster...
+  hosts: kubemaster
+  roles:
+    - deploy-kubernetes
+
+- name: Getting token from the master node...
+  hosts: kubemaster
+  roles:
+    - get-join-command
+
+- name: Joining workers to the cluster...
+  hosts: kubeworker
+  roles:
+    - join-cluster
+
+- name: Get .kube/config file from the master node...
+  hosts: kubemaster
+  roles:
+    - fetch-kube-config
+
+- name: Add Labes to Nodes...
+  hosts: kubemaster
+  roles:
+    - kube-node-labels
+
+- name: Create NameSpaces and Secrets for Kubernetes...
+  hosts: kubemaster
+  roles:
+    - namespace-secrets
+
+- name: Deploy Metallb...
+  hosts: kubemaster
+  roles:
+    - deploy-metallb
+
+- name: Install NFS Server...
+  hosts: kubemaster
+  roles:
+    - deploy-nfs-server
+  
+- name: Install NFS Client...
+  hosts: kubeworker
+  roles:
+    - deploy-nfs-client
+
+- name: Create Persistent Volume for Kubernetes...
+  hosts: kubemaster
+  roles:
+    - deploy-persistent-volume
+
+- name: Deploy Postgres...
+  hosts: kubemaster
+  roles:
+    - deploy-postgres
+
+- name: Traefik Install...
+  hosts: kubemaster
+  roles:
+    - deploy-traefik
+
+- name: ArgoCD Install...
+  hosts: kubemaster
+  roles:
+    - deploy-argocd
+
+- name: Install DroneCI for Deploy Pipelines...
+  hosts: kubemaster
+  roles:
+    - deploy-droneci
+
+- name: Firewall Update...
+  hosts: all
+  roles:
+    - firewall-update
+
+- name: Deploy Cert-Manager...
+  hosts: kubemaster
+  roles:
+    - deploy-cert-manager

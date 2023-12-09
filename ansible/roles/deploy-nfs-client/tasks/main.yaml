@@ -1,0 +1,7 @@
+---
+- name: Deploy NFS Server...
+  become: true
+  shell: |
+        cd /home/ansible/kube_setup/nfsprovisioning
+        chmod +x nfs-client.sh
+        ./nfs-client.sh

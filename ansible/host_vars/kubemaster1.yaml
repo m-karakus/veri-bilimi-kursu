@@ -1,0 +1,2 @@
+kube_git_repo: git@gitlab.com:bnf_project/kube.git
+gitcommand: git config --global user.email s.metinkarakus@gmail.com && git config --global user.name metin-karakus

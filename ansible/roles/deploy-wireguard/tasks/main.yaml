@@ -1,0 +1,47 @@
+---
+# tasks file for wireguard clients (worker nodes)
+
+- name: Installing WireGuard
+  become: true
+  apt:
+    name:
+      - wireguard
+    state: present
+    update_cache: true
+
+- name: Copy Wirehole Folder
+  become: true
+  copy:
+    src: "wireguard/{{ item }}"
+    dest: /etc/wireguard/wg0.conf
+  when: inventory_hostname in item
+  with_items:
+    - kubemaster1.conf
+    - kubeworker1.conf
+    - kubeworker2.conf
+
+- name: Create syembolic link...
+  become: true
+  shell: |
+        ln -s /usr/bin/resolvectl /usr/local/bin/resolvconf || echo "already created"
+
+- name: Up the vpn connection...
+  become: true
+  shell: |
+        echo -e "net.ipv4.ip_forward=1\nnet.ipv6.conf.all.forwarding=1" > /etc/sysctl.conf
+        sysctl -p
+        systemctl is-active wg-quick@wg0 && systemctl stop wg-quick@wg0
+        systemctl enable wg-quick@wg0.service
+        systemctl daemon-reload
+        systemctl start wg-quick@wg0
+        systemctl status wg-quick@wg0
+
+# # if you want to disable vpn autostart
+# - name: Up the vpn connection...
+#   become: true
+#   shell: |
+#       systemctl stop wg-quick@wg0
+#       systemctl disable wg-quick@wg0.service
+#       rm -i /etc/systemd/system/wg-quick@wg0*
+#       systemctl daemon-reload
+#       systemctl reset-failed

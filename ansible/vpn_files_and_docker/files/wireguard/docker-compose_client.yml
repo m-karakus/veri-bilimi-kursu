@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  wireguard:
+    image: linuxserver/wireguard
+    container_name: wireguard
+    restart: unless-stopped
+    networks:
+      - backbone
+    volumes:
+      - './wireguard:/config'
+      - '/lib/modules:/lib/modules:ro'
+    environment:
+      - PUID=1000
+      - PGID=1000
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+
+networks:
+  backbone:
+    driver: bridge
+---
+
+# under the existing "services:" node, add the following content
+version: "3.8"
+  ubuntu:
+    depends_on:
+      - wireguard
+    image: ubuntu
+    container-name: ubuntu
+    network_mode: service:wireguard
+    command: >-
+      sleep 10 && curl -w "\n" ifconfig.me

@@ -1,0 +1,11 @@
+---
+- name: Deploy Kubernetes Persistent Volume Clame...
+  shell: |
+        cd /home/ansible/kube_setup/nfsprovisioning
+        kubectl apply -f 01_rbac.yaml
+        kubectl apply -f 02_deployment.yaml
+        kubectl apply -f 03_class.yaml
+
+# kubectl get sc
+# kubectl get cs
+# kubectl get pv,pvc -A

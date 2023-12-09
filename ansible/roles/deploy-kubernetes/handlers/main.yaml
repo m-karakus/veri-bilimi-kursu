@@ -1,0 +1,5 @@
+---
+- name: Restart Server
+  become: true
+  reboot:
+    reboot_timeout: 3600

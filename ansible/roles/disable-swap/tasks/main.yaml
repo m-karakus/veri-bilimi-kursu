@@ -1,0 +1,12 @@
+---
+# tasks file for disable-swap
+- name: Disabling swap on hosts...
+  become: true
+  shell: swapoff -a
+
+- name: Disabling swap from fstab...
+  become: true
+  replace:
+    path: /etc/fstab
+    regexp: '^([^#].*?\sswap\s+sw\s+.*)$'
+    replace: '# \1'  

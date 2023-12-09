@@ -1,0 +1,36 @@
+image:
+  repository: drone/drone-runner-kube
+  tag: 1.0.0-rc.3
+  pullPolicy: IfNotPresent
+replicaCount: 1
+terminationGracePeriodSeconds: 3600
+
+service:
+  type: ClusterIP
+  port: 3000
+
+ingress:
+  enabled: false
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: Prefix
+nodeSelector: {}
+tolerations: []
+extraVolumes: []
+
+rbac:
+  buildNamespaces:
+    - drone
+
+serviceAccount:
+  annotations: {}
+
+env:
+  DRONE_RPC_HOST: drone
+  DRONE_RPC_PROTO: http
+  DRONE_NAMESPACE_DEFAULT: drone
+  DRONE_RPC_SECRET: 706205913cdf7c9af8f7fd950741ea00 
+  DRONE_SECRET_PLUGIN_ENDPOINT: http://drone-kubernetes-secrets:3000
+  DRONE_SECRET_PLUGIN_TOKEN: de24501127ad7944332d04688638fdd8

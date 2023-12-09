@@ -1,0 +1,15 @@
+---
+# tasks file for join-cluster
+- name: Kubeadm Reset...
+  become: true
+  shell: |
+        kubeadm reset --force
+
+- name: Clean the config files for kubernetes
+  ignore_errors: yes
+  shell: |
+        rm $HOME/.kube/config
+
+- name: Joining to the cluster
+  become: yes
+  shell: "{{ hostvars['kubemaster1']['join_command'] }} --node-name kubeworker1"

@@ -1,0 +1,8 @@
+---
+- name: Add Labes to Kubernetes Nodes
+  ignore_errors: yes
+  shell: |
+        kubectl label nodes kubemaster1 type=master
+        kubectl label nodes kubemaster1 replica=include
+        kubectl label nodes kubeworker1 type=worker
+        kubectl label nodes kubeworker1 replica=include

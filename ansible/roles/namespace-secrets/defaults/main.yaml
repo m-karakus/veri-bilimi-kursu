@@ -1,0 +1,4 @@
+---
+kubernetes_namespaces:
+- dev
+- prod

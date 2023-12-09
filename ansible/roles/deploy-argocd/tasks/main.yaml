@@ -1,0 +1,40 @@
+---
+- name: Install ArgoCD...
+  shell: |
+        kubectl create namespace argocd
+        kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+        sleep 5
+        kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort", "ports": [{"name": "server", "nodePort": 30001, "port": 80, "protocol": "TCP", "targetPort": 8080},{"name": "metrics", "nodePort": 30401, "port": 443, "protocol": "TCP", "targetPort": 8080}]}}'
+
+- name: Wait for the services 60 sec...
+  pause:
+    seconds: 60
+
+- name: Getting ArgoCD initial password from the master node...
+  shell: kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+  register: argocd_passwd
+
+- name: Setting ArgoCd Passwd...
+  set_fact:
+    argocd_passwd: "{{ argocd_passwd.stdout_lines[0] }}"
+
+- debug:
+    msg: "ArgoCD user:'admin'  passwd: '{{ hostvars['kubemaster1']['argocd_passwd'] }}' Please Change This from UI http://10.3.0.1:30001/"
+
+- name: ArgoCD CLI...
+  shell: |
+        curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+        sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
+        rm argocd-linux-amd64
+
+- name: ArgoCD Login...
+  shell: argocd login 10.3.0.1:30001 --insecure --username admin --password '{{ hostvars['kubemaster1']['argocd_passwd'] }}'
+        
+- name: ArgoCD Add Git Repositories...
+  shell: |
+        argocd repo add {{ hostvars['kubemaster1']['kube_git_repo'] }} --ssh-private-key-path ~/.ssh/argo
+
+- name: ArgoCD create and sync workspace...
+  shell: |
+      kubectl apply -f $HOME/kube_setup/argocd-values.yaml
+      

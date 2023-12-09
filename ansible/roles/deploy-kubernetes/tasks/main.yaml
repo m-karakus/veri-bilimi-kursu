@@ -1,0 +1,54 @@
+---
+# tasks file for deploy-kubernetes
+- name: Kubeadm Reset...
+  become: true
+  shell: |
+        kubeadm reset --force
+        ifconfig cni0 down
+        ifconfig flannel.1 down
+        ip link delete cni0
+        ip link delete flannel.1
+        rm -rf /etc/cni/net.d/
+
+- name: Clean the config files for kubernetes
+  ignore_errors: yes
+  shell: |
+        rm $HOME/.kube/config
+
+- name: Initializing the kubernetes cluster on the master node...
+  become: true
+  shell: |
+        kubeadm init \
+          --apiserver-advertise-address=10.3.0.1 \
+          --pod-network-cidr 10.244.0.0/16 \
+          --apiserver-cert-extra-sans=10.3.0.1 \
+          --node-name kubemaster1 \
+          --control-plane-endpoint "10.3.0.1:6443" \
+          --upload-certs
+
+- name: Creating .kube directory
+  file:
+    path: $HOME/.kube
+    state: directory
+    mode: 0755
+
+- name: Configuring users cluster access
+  become: true
+  copy:
+    src: /etc/kubernetes/admin.conf
+    dest: /home/ansible/.kube/config
+    remote_src: true
+    owner: ansible
+
+- name: Installing Pod network.... (Flannel)
+  shell: |
+      kubectl create ns kube-flannel
+      kubectl label --overwrite ns kube-flannel pod-security.kubernetes.io/enforce=privileged
+      helm repo add flannel https://flannel-io.github.io/flannel/
+      helm upgrade --install flannel --set podCidr="10.244.0.0/16" --namespace kube-flannel flannel/flannel --version v0.23.0 --create-namespace
+
+- name: Initializing the kubernetes cluster on the master node...
+  shell: |
+        kubectl taint nodes --all node-role.kubernetes.io/master-
+        kubectl taint nodes --all node-role.kubernetes.io/control-plane:NoSchedule-
+  notify: Restart Server

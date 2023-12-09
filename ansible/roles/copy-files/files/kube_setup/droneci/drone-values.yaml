@@ -1,0 +1,40 @@
+image:
+  registry: docker.io
+  repository: drone/drone
+  tag: 2.12.1
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+  nodePort: 30002
+
+ingress:
+  enabled: false
+  className: ""
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: Prefix
+
+persistentVolume:
+  ## If you are using SQLite as your DB for Drone, it is recommended to enable persistence. If
+  ## enabled, the Chart will create a PersistentVolumeClaim to store its state in. If you are
+  ## using a DB other than SQLite, set this to false to avoid allocating unused storage.
+  ## If set to false, Drone will use an emptyDir instead, which is ephemeral.
+  ##
+  enabled: false
+  accessModes:
+    - ReadWriteOnce
+  mountPath: /data
+  size: 8Gi
+
+env:
+  DRONE_USER_CREATE: username:metin-karakus,admin:true # TODO: Change with gitlab username
+  DRONE_GITLAB_CLIENT_ID:  # TODO: Change This
+  DRONE_GITLAB_CLIENT_SECRET:  # TODO: Change This
+  DRONE_GITLAB_SERVER: https://gitlab.com # TODO: Change This
+  DRONE_SERVER_PROTO: http
+  DRONE_SERVER_HOST: 165.35.191.203:30002 # TODO: Change This
+  DRONE_RPC_SECRET: 706205913cdf7c9af8f7fd950741ea00 

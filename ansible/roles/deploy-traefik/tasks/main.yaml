@@ -1,0 +1,15 @@
+---
+- name: Delete NameSpace...
+  shell: kubectl delete namespace traefik
+  ignore_errors: yes
+  
+- name: Deploy Traefik Server...
+  shell: |
+        helm repo add traefik https://traefik.github.io/charts
+        helm repo update
+        cd /home/ansible/kube_setup
+        helm upgrade --install traefik traefik/traefik \
+            --version "25.0.0" \
+            --values traefik-values.yaml \
+            --namespace traefik  \
+            --create-namespace

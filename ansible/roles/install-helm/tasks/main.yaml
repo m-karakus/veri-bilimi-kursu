@@ -1,0 +1,16 @@
+# tasks file for install-helm
+
+- name: Getting helm install script...
+  shell: curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+  args:
+    chdir: /home/ansible/
+
+- name: Installing helm... (1)
+  become: yes
+  shell: chmod 700 get_helm.sh
+  args:
+    chdir: /home/ansible/
+
+- name: Installing helm... (2)
+  become: yes
+  shell: /home/ansible/get_helm.sh

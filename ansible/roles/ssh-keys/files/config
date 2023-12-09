@@ -1,0 +1,5 @@
+Host *
+  IgnoreUnknown AddKeysToAgent
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/argo
+  StrictHostKeyChecking no

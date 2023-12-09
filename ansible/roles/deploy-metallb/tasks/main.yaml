@@ -1,0 +1,19 @@
+---
+- name: Metallb Preparation...
+  shell: |
+        kubectl get configmap kube-proxy -n kube-system -o yaml | \
+        sed -e "s/strictARP: false/strictARP: true/" | \
+        kubectl apply -f - -n kube-system
+
+- name: Metallb Install...
+  shell: |
+        kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.12/config/manifests/metallb-native.yaml
+
+- name: Wait for the services 60 sec...
+  pause:
+    seconds: 60
+
+- name: Metallb Install Part2...
+  shell: |
+        cd /home/ansible/kube_setup
+        kubectl apply -f metallb-values.yaml 

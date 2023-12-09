@@ -1,0 +1,12 @@
+---
+# tasks file for get-join-command
+- name: Getting join command from the master node...
+  shell: kubeadm token create --print-join-command
+  register: join_command
+
+- name: Setting join command...
+  set_fact:
+    join_command: "{{ join_command.stdout_lines[0] }}"
+
+- debug:
+    msg: "{{ hostvars['kubemaster1']['join_command'] }}"

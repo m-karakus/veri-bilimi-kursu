@@ -1,0 +1,82 @@
+---
+- name: Install UFW firewall...
+  become: true
+  apt: name=ufw update_cache=yes state=latest 
+
+- name: Brute-force login attacks protection
+  become: true
+  ufw:
+    rule: limit
+    port: ssh
+    proto: tcp
+
+- name: Allow all access to tcp ports
+  become: true
+  ufw:
+    rule: allow
+    port: '{{ item }}'
+    proto: tcp
+  loop:
+    - 22    # ssh
+    - 2222  # ssh
+    - 80    # http
+    - 8080  # http
+    - 443   # https
+    - 8443  # https
+    - 6443  # kubernetes
+    - 53    # dns
+    - 25    # 'allow smtp connections'
+    - 587   # 'allow smtp tls connections'
+    - 465   # 'allow smtp ssl connections'
+    - 995   # 'allow pops connections'
+    - 110   # 'allow pop3 connections'
+    - 143   # 'allow imap connections'
+    - 993   # 'allow imap3 connections'
+    - 179
+    - 4789
+    - 5473
+    - 2379
+    - 4149
+    - 10250
+    - 10251
+    - 10252
+    - 10255
+    - 10256
+    - 9099
+    - 2379
+    - 2380
+
+- name: Allow all access to tcp ports
+  become: true
+  ufw:
+    rule: allow
+    port: '{{ item }}'
+    proto: udp
+  loop:
+    - 51820
+    - 8285
+    - 8472
+
+- name: Allow port range 30000:32767
+  become: true
+  ufw:
+    rule: allow
+    port: '{{ item }}'
+    proto: tcp
+    comment: Kubernetes NodePort Services(worker)
+  loop:
+    - 30000:32767
+
+- name: Add Custom UFW Rules...
+  become: true
+  shell: |
+      ufw allow nfs
+      ufw allow OpenSSH
+      ufw allow from 10.3.0.1 comment 'WireGuard'
+
+- name: Enable UFW
+  become: true
+  ufw:
+    state: enabled #  disabled
+
+

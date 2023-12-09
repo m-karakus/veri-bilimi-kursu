@@ -1,0 +1,23 @@
+---
+
+- name: Copy Wirehole Folder
+  copy:
+    src: wirehole/
+    dest: wirehole/
+
+- name: Run Wirehole with Docker Compose
+  docker_compose:
+    project_src: wirehole/
+    state: present
+
+- name: Fetch VPN Configs to the Local
+  become: true
+  ansible.builtin.fetch:
+    src: "{{ item }}"
+    dest: wirehole/config/
+    flat: yes
+  with_items:
+    # - "wirehole/config/peer1/peer1.png" # server1
+    # - "wirehole/config/peer1/peer1.conf"
+    - "wirehole/wg_confs/wg0.conf"
+    - "wirehole/wg_confs/wg0.json"

@@ -1,0 +1,14 @@
+---
+# tasks file for install-docker-packages
+- name: Update and upgrade apt packages
+  become: true
+  apt:
+    update_cache: true
+    upgrade: true
+
+- name: Install Required Packages
+  become: true
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ required_packages }}"

@@ -1,0 +1,52 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'git@gitlab.com:bnf_project/kube.git' # TODO: Change This
+    targetRevision: HEAD
+    path: dev
+    directory:
+      recurse: true
+  destination: 
+    server: https://kubernetes.default.svc
+    # namespace: default
+    namespace: dev
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prod
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'git@gitlab.com:bnf_project/kube.git' # TODO: Change This
+    targetRevision: HEAD
+    path: prod
+    directory:
+      recurse: true
+  destination: 
+    server: https://kubernetes.default.svc
+    # namespace: default
+    namespace: prod
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true

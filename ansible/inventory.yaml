@@ -1,0 +1,12 @@
+---
+kubemaster:
+  hosts:
+    kubemaster1:
+      ansible_host: # TODO: Change This
+      ansible_user: ansible
+
+kubeworker:
+  hosts:
+    kubeworker1: 
+      ansible_host: # TODO: Change This
+      ansible_user: ansible

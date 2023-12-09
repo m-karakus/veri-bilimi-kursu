@@ -1,0 +1,74 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+  labels:
+    app: postgres
+data:
+  POSTGRES_DB: # TODO: Change This
+  POSTGRES_USER: # TODO: Change This
+  POSTGRES_PASSWORD: # TODO: Change This
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgres
+spec:
+  serviceName: "postgres"
+  selector:
+    matchLabels:
+      app: postgres
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:10.4
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 5432
+          envFrom:
+            - configMapRef:
+                name: postgres-config
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgres-volume
+      volumes:
+        - name: postgres-volume
+          persistentVolumeClaim:
+            claimName: postgres-volume
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+  labels:
+    app: postgres
+spec:
+  selector:
+    app: postgres
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      name: http
+      port: 5432
+      targetPort: 5432
+      nodePort: 30032
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: postgres-volume
+spec:
+  accessModes:
+    # - ReadWriteOnce
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
+

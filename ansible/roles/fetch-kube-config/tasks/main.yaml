@@ -1,0 +1,6 @@
+---
+- name: Fetch Kube Configs to the Local
+  ansible.builtin.fetch:
+    src: .kube/config
+    dest: .kube/config
+    flat: yes

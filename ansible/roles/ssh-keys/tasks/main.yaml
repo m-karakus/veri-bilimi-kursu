@@ -1,0 +1,18 @@
+---
+- name: Copy files
+  copy:
+    src: "{{ item }}"
+    dest: ~/.ssh/{{ item }}
+  with_items:
+    - argo
+    - argo.pub
+    - config
+
+- name: Update the ssh files permissinons...
+  shell: |
+        chmod 600 ~/.ssh/argo
+        chmod 600 ~/.ssh/argo.pub
+        sudo chown -R ansible:ansible /home/ansible/.ssh
+
+- name: Update the git configs...
+  shell: "{{ hostvars['kubemaster1']['gitcommand'] }}"

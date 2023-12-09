@@ -1,0 +1,35 @@
+---
+version: "3.8"
+services:
+  wireguard-server:
+    image: lscr.io/linuxserver/wireguard:latest
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Malta
+      - SERVERURL=${MASTER:-auto} #wireguard.domain.com #optional
+      - SERVERPORT=51820 #optional
+      - PEERS=10 #optional
+      - PEERDNS=${DNS:-auto} #optional
+      - INTERNAL_SUBNET=10.3.0.0/24 #optional
+      - ALLOWEDIPS=192.168.0.0/24,10.2.0.0/24,10.3.0.0/24,10.4.0.0/24 # LAN access only by default - you can close it.
+      - PERSISTENTKEEPALIVE_PEERS=False #optional
+      # - LOG_CONFS=true #optional
+    volumes:
+      - ./config:/config
+      - /lib/modules:/lib/modules:rw #optional
+    ports:
+      - 51820:51820/udp
+    sysctls: # just need clients not needed on server
+    - net.ipv6.conf.default.forwarding=1
+    - net.ipv6.conf.all.forwarding=1
+    - net.ipv4.conf.all.src_valid_mark=1
+
+    restart: unless-stopped
+    
+    #linux clien connect command
+    #nmcli connection import type wireguard file "peer1.conf"

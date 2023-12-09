@@ -1,0 +1,11 @@
+---
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: kube_setup
+    state: directory
+    mode: '0755'
+
+- name: Copy kube_setup Folder
+  copy:
+    src: kube_setup/
+    dest: kube_setup/

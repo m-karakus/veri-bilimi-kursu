@@ -1,0 +1,49 @@
+---
+- name: Delete NameSpace...
+  shell: kubectl delete namespace drone
+  ignore_errors: yes
+  
+- name: Create NameSpace...
+  shell: kubectl create namespace drone
+
+- name: Add DroneCI Helm Repo...
+  ignore_errors: yes
+  shell: |
+        helm repo add drone https://charts.drone.io
+        helm repo update
+  
+- name: Deploy DroneCI Server...
+  shell: |
+        cd /home/ansible/kube_setup/droneci
+        helm upgrade --install drone drone/drone \
+            --version "0.6.5" \
+            --values drone-values.yaml \
+            --namespace drone  \
+            --create-namespace
+
+- name: Deploy DroneCI Kubernetes AddsOn...
+  shell: |
+        cd /home/ansible/kube_setup/droneci
+        helm upgrade --install drone-kubernetes-secrets drone/drone-kubernetes-secrets \
+            --version "0.1.4" \
+            --values drone-kubernetes-secrets-values.yaml \
+            --namespace drone  \
+            --create-namespace
+
+- name: Deploy DroneCI Runner...
+  shell: |
+        cd /home/ansible/kube_setup/droneci
+        helm upgrade --install drone-runner-kube drone/drone-runner-kube \
+            --version "0.1.10" \
+            --values drone-runner-kube-values.yaml \
+            --namespace drone  \
+            --create-namespace
+
+- name: Create Secrets for DroneCI Pipelines...
+  shell: |
+        cd /home/ansible/kube_setup/droneci
+        kubectl -n drone apply -f secrets.yaml 
+        cd /home/ansible/kube_setup/keys
+        kubectl -n drone create secret generic ssh-keys \
+            --from-file=ssh-privatekey=ansible \
+            --from-file=ssh-publickey=ansible.pub

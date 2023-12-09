@@ -1,0 +1,13 @@
+---
+# defaults file for deploy-docker
+required_packages:
+- curl
+- gnupg
+- ca-certificates
+- wget
+- apt-transport-https
+- software-properties-common
+- python3-pip
+- net-tools
+- nfs-common
+- coreutils

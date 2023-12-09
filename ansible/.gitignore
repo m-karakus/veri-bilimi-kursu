@@ -1,0 +1,9 @@
+# wireguard/
+unbound/dev/
+unbound/var/
+etc-pihole/
+etc-dnsmasq.d/
+!unbound/unbound.conf
+db/
+#.env*
+!.env.example

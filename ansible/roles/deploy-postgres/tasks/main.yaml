@@ -1,0 +1,5 @@
+---
+- name: Deploy Postgres...
+  shell: |
+        cd /home/ansible/kube_setup/postgres
+        kubectl apply -f postgres.yaml
