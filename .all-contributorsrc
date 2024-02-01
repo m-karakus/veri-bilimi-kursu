@@ -128,6 +128,17 @@
         "code",
         "data"
       ]
+    },
+    {
+      "login": "Republique1",
+      "name": "Burak Ekin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/158058388?v=4",
+      "profile": "https://github.com/Republique1",
+      "contributions": [
+        "bug",
+        "code",
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
