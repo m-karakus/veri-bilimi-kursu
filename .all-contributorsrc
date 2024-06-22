@@ -150,6 +150,17 @@
         "code",
         "data"
       ]
+    },
+    {
+      "login": "jacobkaya",
+      "name": "jacobkaya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/171784418?v=4",
+      "profile": "https://github.com/jacobkaya",
+      "contributions": [
+        "bug",
+        "code",
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
