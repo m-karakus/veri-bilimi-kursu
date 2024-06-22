@@ -152,6 +152,17 @@
       ]
     },
     {
+      "login": "huseyincoban01",
+      "name": "Hüseyin Çoban",
+      "avatar_url": "https://avatars.githubusercontent.com/u/153460129?v=4",
+      "profile": "https://www.linkedin.com/in/hüseyin-çoban-50a6428b/",
+      "contributions": [
+        "bug",
+        "code",
+        "data"
+      ]
+    },
+    {
       "login": "elifkeskin",
       "name": "elifkeskin",
       "avatar_url": "https://avatars.githubusercontent.com/u/90678194?v=4",
@@ -172,8 +183,7 @@
         "code",
         "data"
       ]
-    }
-    
+    }    
   ],
   "contributorsPerLine": 7,
   "skipCi": true,
