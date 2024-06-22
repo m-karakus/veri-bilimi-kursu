@@ -13,4 +13,5 @@ R Emrah Gökkaya
 hakan  
 Burak Ekin
 Tunahan Yılmaz  
+Jacob Kaya
 Elif Keskin
