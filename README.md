@@ -1,6 +1,6 @@
 # Veri Bilimi Kursu
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 - [Veri Bilimi Kursu](#veri-bilimi-kursu)
@@ -130,6 +130,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hakanmetei"><img src="https://avatars.githubusercontent.com/u/156716976?v=4?s=100" width="100px;" alt="hakanmetei"/><br /><sub><b>hakanmetei</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3Ahakanmetei" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=hakanmetei" title="Code">💻</a> <a href="#data-hakanmetei" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Republique1"><img src="https://avatars.githubusercontent.com/u/158058388?v=4?s=100" width="100px;" alt="Burak Ekin"/><br /><sub><b>Burak Ekin</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3ARepublique1" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=Republique1" title="Code">💻</a> <a href="#data-Republique1" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tunahannyilmazz"><img src="https://avatars.githubusercontent.com/u/161649823?v=4?s=100" width="100px;" alt="tunahannyilmazz"/><br /><sub><b>tunahannyilmazz</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3Atunahannyilmazz" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=tunahannyilmazz" title="Code">💻</a> <a href="#data-tunahannyilmazz" title="Data">🔣</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/hüseyin-çoban-50a6428b/"><img src="https://avatars.githubusercontent.com/u/153460129?v=4?s=100" width="100px;" alt="Hüseyin Çoban"/><br /><sub><b>Hüseyin Çoban</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3Ahuseyincoban01" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=huseyincoban01" title="Code">💻</a> <a href="#data-huseyincoban01" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
