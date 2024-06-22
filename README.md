@@ -133,6 +133,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jacobkaya"><img src="https://avatars.githubusercontent.com/u/171784418?v=4?s=100" width="100px;" alt="jacobkaya"/><br /><sub><b>jacobkaya</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3Ajacobkaya" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=jacobkaya" title="Code">💻</a> <a href="#data-jacobkaya" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/elifkeskin"><img src="https://avatars.githubusercontent.com/u/90678194?v=4?s=100" width="100px;" alt="elifkeskin"/><br /><sub><b>elifkeskin</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3Aelifkeskin" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=elifkeskin" title="Code">💻</a> <a href="#data-elifkeskin" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
