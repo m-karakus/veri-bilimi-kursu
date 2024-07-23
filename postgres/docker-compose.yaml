@@ -30,18 +30,18 @@ services :
 
   # pgadmin tool
 
-  pgadmin4:
-    image: dpage/pgadmin4
-    container_name: pgadmin4
-    restart: unless-stopped
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=metin_karakus@yahoo.com
-      - PGADMIN_DEFAULT_PASSWORD=passwd
-      - PGADMIN_LISTEN_PORT=5050
-    ports:
-      - "${PGADMIN_PORT:-5050}:${PGADMIN_PORT:-5050}"
-    depends_on:
-      - db
+  # pgadmin4:
+  #   image: dpage/pgadmin4
+  #   container_name: pgadmin4
+  #   restart: unless-stopped
+  #   environment:
+  #     - PGADMIN_DEFAULT_EMAIL=metin_karakus@yahoo.com
+  #     - PGADMIN_DEFAULT_PASSWORD=passwd
+  #     - PGADMIN_LISTEN_PORT=5050
+  #   ports:
+  #     - "${PGADMIN_PORT:-5050}:${PGADMIN_PORT:-5050}"
+  #   depends_on:
+  #     - db
     # network_mode: host
 
 # # if you want to use named volue uncomment this
