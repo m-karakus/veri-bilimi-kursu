@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"      # RabbitMQ message broker port
+      - "15672:15672"    # RabbitMQ management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  celery_worker:
+    build: .
+    command: celery -A celery_app worker --loglevel=info
+    depends_on:
+      rabbitmq:
+        condition: service_healthy  # Wait for RabbitMQ to be healthy
+    environment:
+      - CELERY_BROKER_URL=pyamqp://guest@rabbitmq//
+      - CELERY_RESULT_BACKEND=rpc://
+    scale: 4  # Set the number of workers to 4
+
+  flower:
+    build: .
+    command: celery -A celery_app flower --port=5555 --basic_auth=username:password
+    ports:
+      - "5555:5555"
+    depends_on:
+      rabbitmq:
+        condition: service_healthy  # Wait for RabbitMQ to be healthy
+    environment:
+      - CELERY_BROKER_URL=pyamqp://guest@rabbitmq//
+      - CELERY_RESULT_BACKEND=rpc://
+    restart: always  # Restart Flower if it fails due to connection issues
+
+  trigger_tasks:
+    build: .
+    command: python trigger_tasks.py
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      celery_worker:
+        condition: service_started
+    environment:
+      - CELERY_BROKER_URL=pyamqp://guest@rabbitmq//
+      - CELERY_RESULT_BACKEND=rpc://

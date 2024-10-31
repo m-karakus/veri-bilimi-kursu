@@ -178,12 +178,23 @@
       "name": "jacobkaya",
       "avatar_url": "https://avatars.githubusercontent.com/u/171784418?v=4",
       "profile": "https://github.com/jacobkaya",
-          "contributions": [
+      "contributions": [
         "bug",
         "code",
         "data"
       ]
-    }    
+    },
+    {
+      "login": "Serap-Dogan",
+      "name": "Serap-Dogan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123492862?v=4",
+      "profile": "https://github.com/Serap-Dogan",
+      "contributions": [
+        "bug",
+        "code",
+        "data"
+      ]
+    }
   ],
   "contributorsPerLine": 7,
   "skipCi": true,
