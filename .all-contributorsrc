@@ -194,6 +194,17 @@
         "code",
         "data"
       ]
+    },
+    {
+      "login": "ESRA-TUNC",
+      "name": "ESRA TUNÇ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/184479682?v=4",
+      "profile": "https://github.com/ESRA-TUNC",
+      "contributions": [
+        "bug",
+        "code",
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
