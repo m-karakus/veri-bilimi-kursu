@@ -1,6 +1,6 @@
 # Veri Bilimi Kursu
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-18-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-19-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 - [Veri Bilimi Kursu](#veri-bilimi-kursu)
@@ -136,6 +136,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/elifkeskin"><img src="https://avatars.githubusercontent.com/u/90678194?v=4?s=100" width="100px;" alt="elifkeskin"/><br /><sub><b>elifkeskin</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3Aelifkeskin" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=elifkeskin" title="Code">💻</a> <a href="#data-elifkeskin" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jacobkaya"><img src="https://avatars.githubusercontent.com/u/171784418?v=4?s=100" width="100px;" alt="jacobkaya"/><br /><sub><b>jacobkaya</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3Ajacobkaya" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=jacobkaya" title="Code">💻</a> <a href="#data-jacobkaya" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Serap-Dogan"><img src="https://avatars.githubusercontent.com/u/123492862?v=4?s=100" width="100px;" alt="Serap-Dogan"/><br /><sub><b>Serap-Dogan</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3ASerap-Dogan" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=Serap-Dogan" title="Code">💻</a> <a href="#data-Serap-Dogan" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ESRA-TUNC"><img src="https://avatars.githubusercontent.com/u/184479682?v=4?s=100" width="100px;" alt="ESRA TUNÇ"/><br /><sub><b>ESRA TUNÇ</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3AESRA-TUNC" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=ESRA-TUNC" title="Code">💻</a> <a href="#data-ESRA-TUNC" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
