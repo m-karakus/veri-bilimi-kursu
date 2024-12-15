@@ -1,6 +1,6 @@
 # Veri Bilimi Kursu
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-20-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 - [Veri Bilimi Kursu](#veri-bilimi-kursu)
@@ -138,7 +138,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Serap-Dogan"><img src="https://avatars.githubusercontent.com/u/123492862?v=4?s=100" width="100px;" alt="Serap-Dogan"/><br /><sub><b>Serap-Dogan</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3ASerap-Dogan" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=Serap-Dogan" title="Code">💻</a> <a href="#data-Serap-Dogan" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ESRA-TUNC"><img src="https://avatars.githubusercontent.com/u/184479682?v=4?s=100" width="100px;" alt="ESRA TUNÇ"/><br /><sub><b>ESRA TUNÇ</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3AESRA-TUNC" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=ESRA-TUNC" title="Code">💻</a> <a href="#data-ESRA-TUNC" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sultanclk"><img src="https://avatars.githubusercontent.com/u/188430660?v=4?s=100" width="100px;" alt="sultanclk"/><br /><sub><b>sultanclk</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3Asultanclk" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=sultanclk" title="Code">💻</a> <a href="#data-sultanclk" title="Data">🔣</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/enbody0"><img src="https://avatars.githubusercontent.com/u/183536713?v=4?s=100" width="100px;" alt="enbody0"/><br /><sub><b>enbody0</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3Aenbody0" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=enbody0" title="Code">💻</a> <a href="#data-enbody0" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mertgayretli"><img src="https://avatars.githubusercontent.com/u/190552339?v=4?s=100" width="100px;" alt="mertgayretli"/><br /><sub><b>mertgayretli</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3Amertgayretli" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=mertgayretli" title="Code">💻</a> <a href="#data-mertgayretli" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
