@@ -17,89 +17,89 @@
 
 ## Unite 1 Ortamın Kurulması
 
-- [Git ve Github Kurulumu](https://www.youtube.com/watch?v=mHP2YnD9J-U)
-- [Virtual Box Kurulumu](https://www.youtube.com/watch?v=EH-354H0ne8)
-- [Virtual Box üzerine Linux Lite kurulumu](./ekler/virtualbox_kurulum.md)
-- [Vs Code Programının indirilmesi ve Senkronizasyon ayarları](./ekler/vscode_eklentiler.md)
-- [Docker ve Docker Compose Kurulumu](./ekler/docker_kurulum.md)
+- [x] [Git ve Github Kurulumu](https://www.youtube.com/watch?v=mHP2YnD9J-U)
+- [x] [Virtual Box Kurulumu](https://www.youtube.com/watch?v=EH-354H0ne8)
+- [x] [Virtual Box üzerine Linux Lite kurulumu](./ekler/virtualbox_kurulum.md)
+- [x] [Vs Code Programının indirilmesi ve Senkronizasyon ayarları](./ekler/vscode_eklentiler.md)
+- [x] [Docker ve Docker Compose Kurulumu](./ekler/docker_kurulum.md)
 
 
 ## Unite 2 SQL ve Veri Tabanları
 
-- [Veri Tabanı Nedir? Veri Tabanı tipleri](https://www.youtube.com/watch?v=BqlIB-TJiNw)
-- [Veri Tabanı Oluşturma](./postgres/postgrest.md)
-- [Google Cloud Ayarlarının yapılması ve Bigquery'e giriş](https://youtube.com/watch?v=JeSKgXkCTHU&si=EnSIkaIECMiOmarE)
-- [SQL Sonuçlarını görmek](https://youtube.com/watch?v=UxZb4cmzwxY&si=EnSIkaIECMiOmarE)
-- [SQL Komutları](https://youtube.com/watch?v=YTT0utDyKeY&si=EnSIkaIECMiOmarE)
-- [SQL CRUD İşlemleri](https://youtube.com/watch?v=0XGSlAsyzoU&si=EnSIkaIECMiOmarE)
-- [SQL'de Aritmatik Operasyonlar](https://youtube.com/watch?v=4JDPP-7UXA4&si=EnSIkaIECMiOmarE)
-- [SQL'de Tabloları bağlama - JOIN](https://youtube.com/watch?v=z1VtVGqFESo&si=EnSIkaIECMiOmarE)
-- [SQL'de Hesaplama - Gruplama İşlemleri](https://youtube.com/watch?v=SNJy_38C7Bg&si=EnSIkaIECMiOmarE)
-- [SQL'de Hazır Fonksiyonlar](https://youtube.com/watch?v=MDmJUMt_19o&si=EnSIkaIECMiOmarE)
-- [SQL'de Tablo Oluşturma](https://youtube.com/watch?v=JeSKgXkCTHU&si=EnSIkaIECMiOmarE)
-- [SQL'de CTE(common table expression) Nedir ve Nasıl kullanılır?](https://youtube.com/watch?v=JeSKgXkCTHU&si=EnSIkaIECMiOmarE) 
+- [x] [Veri Tabanı Nedir? Veri Tabanı tipleri](https://www.youtube.com/watch?v=BqlIB-TJiNw)
+- [x] [Veri Tabanı Oluşturma](./postgres/postgrest.md)
+- [x] [Google Cloud Ayarlarının yapılması ve Bigquery'e giriş](https://youtube.com/watch?v=JeSKgXkCTHU&si=EnSIkaIECMiOmarE)
+- [x] [SQL Sonuçlarını görmek](https://youtube.com/watch?v=UxZb4cmzwxY&si=EnSIkaIECMiOmarE)
+- [x] [SQL Komutları](https://youtube.com/watch?v=YTT0utDyKeY&si=EnSIkaIECMiOmarE)
+- [x] [SQL CRUD İşlemleri](https://youtube.com/watch?v=0XGSlAsyzoU&si=EnSIkaIECMiOmarE)
+- [x] [SQL'de Aritmatik Operasyonlar](https://youtube.com/watch?v=4JDPP-7UXA4&si=EnSIkaIECMiOmarE)
+- [x] [SQL'de Tabloları bağlama - JOIN](https://youtube.com/watch?v=z1VtVGqFESo&si=EnSIkaIECMiOmarE)
+- [x] [SQL'de Hesaplama - Gruplama İşlemleri](https://youtube.com/watch?v=SNJy_38C7Bg&si=EnSIkaIECMiOmarE)
+- [x] [SQL'de Hazır Fonksiyonlar](https://youtube.com/watch?v=MDmJUMt_19o&si=EnSIkaIECMiOmarE)
+- [x] [SQL'de Tablo Oluşturma](https://youtube.com/watch?v=JeSKgXkCTHU&si=EnSIkaIECMiOmarE)
+- [x] [SQL'de CTE(common table expression) Nedir ve Nasıl kullanılır?](https://youtube.com/watch?v=JeSKgXkCTHU&si=EnSIkaIECMiOmarE) 
 
 ## Unite 3 Python Ile Programlama
 
 ### Bölüm 1 Python - Kavramlar
 
-- [Python indirme](https://youtu.be/npN2xyngkcA)
-- [Python Sanal Ortamını oluşturmak]()
-- [Git Reposu uluşturmak](https://youtu.be/mHP2YnD9J-U)
-- [Git'de Branch Yapısı](https://youtu.be/mHP2YnD9J-U)
-- [Pyhon'da Değişken Tipleri ve Değişken Tanımlama](https://youtu.be/BJletCmGN6E)
-- [Python'da Aritmatik ve Mantıksal İşlemler](https://youtu.be/8jaliuPUijM)
-- [Python'da Döngüler](https://youtu.be/CHKX3ghD8Mg)
-- [Python Arrays - Temel tip diziler](https://youtu.be/8b7gzO_252U)
-- [Python Mutable and Immutable Arrays - Değişken ve Sabit Diziler](https://youtu.be/dzurkz-A61w)
-- [Python Dictionary - Sözlükler](https://www.youtube.com/watch?v=WbBsfy5_DiM)
-- [Python Iteration - Yineleme: Veri Yapılarında Döngü](https://youtu.be/CHKX3ghD8Mg?si=VNlSKNGX6F5rGcwS)
-- [Python'da fonksiyonlar ve fonksiyon tipleri](https://youtu.be/jfxu3nqsQU4?si=5Y-1KJGB8Q-VoSKv)
-- [Python Classes & Objects - Sınıflar ve Objeler](https://youtu.be/7TY9BDKhmFg?si=ry4MXaKCPh0yYr3O)
+- [x] [Python indirme](https://youtu.be/npN2xyngkcA)
+- [ ] [Python Sanal Ortamını oluşturmak]()
+- [x] [Git Reposu uluşturmak](https://youtu.be/mHP2YnD9J-U)
+- [x] [Git'de Branch Yapısı](https://youtu.be/mHP2YnD9J-U)
+- [x] [Pyhon'da Değişken Tipleri ve Değişken Tanımlama](https://youtu.be/BJletCmGN6E)
+- [x] [Python'da Aritmatik ve Mantıksal İşlemler](https://youtu.be/8jaliuPUijM)
+- [x] [Python'da Döngüler](https://youtu.be/CHKX3ghD8Mg)
+- [x] [Python Arrays - Temel tip diziler](https://youtu.be/8b7gzO_252U)
+- [x] [Python Mutable and Immutable Arrays - Değişken ve Sabit Diziler](https://youtu.be/dzurkz-A61w)
+- [x] [Python Dictionary - Sözlükler](https://www.youtube.com/watch?v=WbBsfy5_DiM)
+- [x] [Python Iteration - Yineleme: Veri Yapılarında Döngü](https://youtu.be/CHKX3ghD8Mg?si=VNlSKNGX6F5rGcwS)
+- [x] [Python'da fonksiyonlar ve fonksiyon tipleri](https://youtu.be/jfxu3nqsQU4?si=5Y-1KJGB8Q-VoSKv)
+- [x] [Python Classes & Objects - Sınıflar ve Objeler](https://youtu.be/7TY9BDKhmFg?si=ry4MXaKCPh0yYr3O)
 
 ### Bölüm 2 Veri Dönüştürme
-- [İstatistiksel Bakış]()
-  - Combinatorics
-  - Probability Theory
-  - Statistical Distributions
-  - Sampling Methods
-  - Hypothesis Testing
-  - A/B Testing
-  - Linear Regression
-  - Model Evaluation
-- [NumPy Nedir?](https://www.youtube.com/playlist?list=PLanC6OPLYlCZosNT_o3p2-j1LREzWwpJp)
-- [NumPy ile Ornekler](https://www.youtube.com/playlist?list=PLanC6OPLYlCZosNT_o3p2-j1LREzWwpJp)
-- [DataFrames - Veri Çerçeveleri]()
-- [Pandas ile örnekler]()
-- [Python ile Veri Görselleştirme]()
-  - Zaman Serileri
-  - Dağılım Grafikleri
-  - İlişkisel grafikler
-  - Örnek Veri Görselleştirme Projesi
+- [ ] [İstatistiksel Bakış]()
+  - [ ] Combinatorics
+  - [ ] Probability Theory
+  - [ ] Statistical Distributions
+  - [ ] Sampling Methods
+  - [ ] Hypothesis Testing
+  - [ ] A/B Testing
+  - [ ] Linear Regression
+  - [ ] Model Evaluation
+- [x] [NumPy Nedir?](https://www.youtube.com/playlist?list=PLanC6OPLYlCZosNT_o3p2-j1LREzWwpJp)
+- [x] [NumPy ile Ornekler](https://www.youtube.com/playlist?list=PLanC6OPLYlCZosNT_o3p2-j1LREzWwpJp)
+- [ ] [DataFrames - Veri Çerçeveleri]()
+- [ ] [Pandas ile örnekler]()
+- [ ] [Python ile Veri Görselleştirme]()
+  - [ ] Zaman Serileri
+  - [ ] Dağılım Grafikleri
+  - [ ] İlişkisel grafikler
+  - [ ] Örnek Veri Görselleştirme Projesi
 
 ### Bölüm 3 ETL (Extract, Transform and Load) - Çıkar, Dönüştür, Yükle
 
-- [ETL Nedir?]()
-- [Basit ETL Örneği]()
-- [Apache Airflow ile ETL]()
-- [Dagster İle ETL]()
-- [Airbyte ve Dagster ile örnek ETL Projesi]()
+- [ ] [ETL Nedir?]()
+- [ ] [Basit ETL Örneği]()
+- [ ] [Apache Airflow ile ETL]()
+- [ ] [Dagster İle ETL]()
+- [ ] [Airbyte ve Dagster ile örnek ETL Projesi]()
 
 ### Bölüm 4 Büyük Veri ile İşlemler: PySpark - Dask - Pandas
 
-- [Pandas, PySpark, Dask Farkı]()
-- [PySpark Kurulumu]()
-- [PySpark İle Veri Temizleme ve Manupülasyon]()
-- [Dask Kurulumu]()
-- [Dask ile Örnek Proje]()
+- [ ] [Pandas, PySpark, Dask Farkı]()
+- [ ] [PySpark Kurulumu]()
+- [ ] [PySpark İle Veri Temizleme ve Manupülasyon]()
+- [ ] [Dask Kurulumu]()
+- [ ] [Dask ile Örnek Proje]()
 
 ## Unite 4 Veri Görselleştirme ve İş Zekası
 
-- [Google Shees ile Veri Görselleştirme](https://www.youtube.com/watch?v=HXfCNI-JDYc)
-- [Datastudio - Looker ile Veri Görselleştirme](https://www.youtube.com/watch?v=DbOAlkvWEFI)
-- [Looker ile Veri Görselleştirme]()
-- [Power Bı ile Veri Görselleştirme](https://www.youtube.com/watch?v=qcB75opF9rg&list=PLanC6OPLYlCYW_hLru-GZcfgMHaaIoe-b&index=35)
-- [Apache Superset Veri Görselleştirme](https://www.youtube.com/watch?v=7zfnaVVue9Y)
+- [x] [Google Shees ile Veri Görselleştirme](https://www.youtube.com/watch?v=HXfCNI-JDYc)
+- [x] [Datastudio - Looker ile Veri Görselleştirme](https://www.youtube.com/watch?v=DbOAlkvWEFI)
+- [ ] [Looker ile Veri Görselleştirme]()
+- [x] [Power Bı ile Veri Görselleştirme](https://www.youtube.com/watch?v=qcB75opF9rg&list=PLanC6OPLYlCYW_hLru-GZcfgMHaaIoe-b&index=35)
+- [x] [Apache Superset Veri Görselleştirme](https://www.youtube.com/watch?v=7zfnaVVue9Y)
 
 
 ---
