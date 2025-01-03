@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satranç Oyunu</title>
+</head>
+
+<body>
+    <script>
+        for (
+            cellIndex = i = y = u = b = i = 5 - 5, boardSize = 10, maxMoves = 15, boardState = [], pieceCodes = []; 
+            pieceCodes[cellIndex] = ("ustvrtsuqqqqqqqqyyyyyyyy}{|~z|{}@G@TSb~?A6J57IKJT576,+-48HLSUmgukgg OJNMLK  IDHGFE").charCodeAt(cellIndex) - 64, cellIndex++ < 120; 
+            boardState[cellIndex - 1] = cellIndex % boardSize ? cellIndex / boardSize % boardSize < 2 | cellIndex % boardSize < 2 ? 7 : cellIndex / boardSize & 4 ? 0 : pieceCodes[u++] : 7
+        );
+
+        function calculateMove(c, h, e, S, s) {
+            c ^= 8;
+            for (var T, o, L, E, D, O = 20, G, N = -1e8, n, g, d = S && calculateMove(c, 0) > 1e4,
+                C, R, A, K = 78 - h << 9, a = c ? boardSize : -boardSize; ++O < 99;)
+                if ((o = boardState[T = O]) && (G = o & maxMoves ^ c) < 7) {
+                    A = G-- & 2 ? 8 : 4;
+                    C = 9 - o &
+                        maxMoves ? pieceCodes[61 + G] : 49;
+                    do {
+                        R = boardState[T += pieceCodes[C]];
+                        g = D = G | T + a - e ? 0 : e;
+                        if (!R && (G || A < 3 || g) || (1 + R & maxMoves ^ c) > 9 && G |
+                            A > 2) {
+                            if (!(2 - R & 7)) return K;
+                            for (E = n = G | boardState[T - a] - 7 ? o & maxMoves : 6 ^ c; E; E = !E && !d && !(g = T, D = T < O ? g -
+                                3 : g + 2, boardState[D] < maxMoves | boardState[D + O - T] | boardState[T += T - O])) {
+                                L = (R && pieceCodes[R & 7 | 32] * 2 - h - G) + (G ? 0 : n - o & maxMoves ? 110 : (D && 14) + (A < 2) + 1);
+                                if (S > h || 1 < S & S == h && L > 2 | d) {
+                                    boardState[T] = n, boardState[g] = boardState[D], boardState[O] = D ? boardState[D] = 0 : 0;
+                                    L -= calculateMove(c, h + 1, E = G | A > 1 ? 0 : T, S, L - N);
+                                    if (!(h || S - 1 | cellIndex - O | T - b | L < -1e4)) return renderBoard(y = E), c && setTimeout("calculateMove(8,0,y,2),calculateMove(8,0,y,1)", 75);
+                                    E = 1 - G | A < 7 | D | !S | R | o < maxMoves || calculateMove(c, 0) > 1e4;
+                                    boardState[O] = o;
+                                    boardState[T] = R;
+                                    boardState[D] = boardState[g];
+                                    D ? boardState[g] = G ? 0 : 9 ^ c : 0
+                                }
+                                if (L > N || !h & L == N && Math.random() < .5)
+                                    if (N = L, S > 1)
+                                        if (h ? s - L < 0 :
+                                            (cellIndex = O, b = T, 0)) return N
+                            }
+                        }
+                    } while (!R & G > 2 || (T = O, G | A > 2 | maxMoves < o & !R && ++C * --A))
+                } return -K +
+                    768 < N | d && N
+        }
+
+        function renderBoard() {
+            i = "<table>";
+            for (u = 18; u < 98; document.body.innerHTML = i += ++
+                u % boardSize - 9 ? "<th width=60 height=60 onclick='boardState[b=" + u +
+                "]&8?renderBoard():calculateMove(0,0,y,1)'style='font-size:50px'bgcolor=#" + (u - cellIndex ? u * .9 & 1 || 9 : "d") +
+                "0f0e0>&#" + (boardState[u] & 15 ? 9808 + pieceCodes[67 + (boardState[u] & 15)] : 160) + ";" : u++ && "<tr>") cellIndex = b
+        }
+        renderBoard()
+
+    </script>
+</body>
+
+</html>
