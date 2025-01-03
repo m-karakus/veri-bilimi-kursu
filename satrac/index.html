@@ -39,7 +39,18 @@
             K: 14  // Opponent's King
         };
 
-        codes = [53, 51, 52, 54, 50, 52, 51, 53, 49, 49, 49, 49, 49, 49, 49, 49, 57, 57, 57, 57, 57, 57, 57, 57, 61, 59, 60, 62, 58, 60, 59, 61, 0, 7, 0, 20, 19, 34, 62, -1, 1, -10, 10, -11, -9, 9, 11, 10, 20, -11, -9, -10, -20, -21, -19, -12, -8, 8, 12, 19, 21, 45, 39, 53, 43, 39, 39, -32, 15, 10, 14, 13, 12, 11, -32, -32, 9, 4, 8, 7, 6, 5]
+        codes = [
+            53, 51, 52, 54, 50, 52, 51, 53, 
+            49, 49, 49, 49, 49, 49, 49, 49, 
+            57, 57, 57, 57, 57, 57, 57, 57,
+            61, 59, 60, 62, 58, 60, 59, 61, 
+            0, 7, 0, 20, 19, 34, 62, -1, 1, 
+            -10, 10, -11, -9, 9, 11, 10, 20, 
+            -11, -9, -10, -20, -21, -19, -12, 
+            -8, 8, 12, 19, 21, 45, 39, 53, 43, 
+            39, 39, -32, 15, 10, 14, 13, 12, 11, 
+            -32, -32, 9, 4, 8, 7, 6, 5
+        ]
         // return generatePieceCodesFromString("ustvrtsuqqqqqqqqyyyyyyyy}{|~z|{}@G@TSb~?A6J57IKJT576,+-48HLSUmgukgg OJNMLK  IDHGFE");
         return codes;
     }
@@ -48,61 +59,79 @@
     const pieceCodes = generatePieceCodesFromFEN("your-fen-string-here");
 
     // Step 2: Initialize Variables for the Game (without affecting piece codes)
-    let y = 0, u = 0, b = 0;
+    let y = 0, u = 0, previousPosition = 0;
     const boardSize = 10, maxMoves = 15;
     let boardState = [];
 
     // Populate the boardState based on the piece codes
-    for (let cellIndex = 0; cellIndex < 120; cellIndex++) {
-        boardState[cellIndex - 1] =
-            cellIndex % boardSize
-                ? (cellIndex / boardSize % boardSize < 2 || cellIndex % boardSize < 2)
-                    ? 7
-                    : cellIndex / boardSize & 4
-                    ? 0
-                    : pieceCodes[u++]
-                : 7;
-    }
+    //for (let cellPosition = 0; cellPosition <= 120; cellPosition++) {
+    //    boardState[cellPosition - 1] =
+    //        cellPosition % boardSize
+    //            ? (cellPosition / boardSize % boardSize < 2 || cellPosition % boardSize < 2)
+    //                ? 7
+    //                : cellPosition / boardSize & 4
+    //                ? 0
+    //                : pieceCodes[u++]
+    //            : 7;
+    //}
+
+    boardState = [
+        7,7,7,7,7,7,7,7,7,7,
+        7,7,7,7,7,7,7,7,7,7,
+        7,53,51,52,54,50,52,51,53,7,
+        7,49,49,49,49,49,49,49,49,7,
+        7,0,0,0,0,0,0,0,0,7,
+        7,0,0,0,0,0,0,0,0,7,
+        7,0,0,0,0,0,0,0,0,7,
+        7,0,0,0,0,0,0,0,0,7,
+        7,57,57,57,57,57,57,57,57,7,
+        7,61,59,60,62,58,60,59,61,7,
+        7,7,7,7,7,7,7,7,7,7,
+        7,7,7,7,7,7,7,7,7,7
+    ]
+
+    console.log("Board State:", boardState);
 
     // Step 3: Game Evaluation Logic (Minimax)
     function calculateMove(playerColor, depth, lastPosition, maxDepth, evaluation) {
         playerColor ^= 8;
-        for (var T, o, L, E, D, O = 20, G, N = -1e8, n, g, d = maxDepth && calculateMove(playerColor, 0) > 1e4,
-            C, R, A, K = 78 - depth << 9, a = playerColor ? boardSize : -boardSize;
-            ++O < 99;) {
-            if ((o = boardState[T = O]) && (G = o & maxMoves ^ playerColor) < 7) {
-                A = G-- & 2 ? 8 : 4;
-                C = 9 - o & maxMoves ? pieceCodes[61 + G] : 49;
+        for (var currentPosition, currentPiece, moveScore, nextMove, targetPosition, boardIndex = 20, pieceType, maxScore = -1e8, validMoves, moveAdjustment, forcedMove = maxDepth && calculateMove(playerColor, 0) > 1e4,
+            pieceCode, targetPiece, moveType, evaluationConstant = 78 - depth << 9, moveDirection = playerColor ? boardSize : -boardSize;
+            ++boardIndex < 99;) {
+            if ((currentPiece = boardState[currentPosition = boardIndex]) && (pieceType = currentPiece & maxMoves ^ playerColor) < 7) {
+                moveType = pieceType-- & 2 ? 8 : 4;
+                pieceCode = 9 - currentPiece & maxMoves ? pieceCodes[61 + pieceType] : 49;
                 do {
-                    R = boardState[T += pieceCodes[C]];
-                    g = D = G | T + a - lastPosition ? 0 : lastPosition;
-                    if (!R && (G || A < 3 || g) || (1 + R & maxMoves ^ playerColor) > 9 && G | A > 2) {
-                        if (!(2 - R & 7)) return K;
-                        for (E = n = G | boardState[T - a] - 7 ? o & maxMoves : 6 ^ playerColor; E; E = !E && !d && !(g = T, D = T < O ? g - 3 : g + 2, boardState[D] < maxMoves | boardState[D + O - T] | boardState[T += T - O])) {
-                            L = (R && pieceCodes[R & 7 | 32] * 2 - depth - G) + (G ? 0 : n - o & maxMoves ? 110 : (D && 14) + (A < 2) + 1);
-                            if (maxDepth > depth || 1 < maxDepth & maxDepth == depth && L > 2 | d) {
-                                boardState[T] = n, boardState[g] = boardState[D], boardState[O] = D ? boardState[D] = 0 : 0;
-                                L -= calculateMove(playerColor, depth + 1, E = G | A > 1 ? 0 : T, maxDepth, L - N);
-                                if (!(depth || maxDepth - 1 | cellIndex - O | T - b | L < -1e4)) return renderBoard(y = E), playerColor && setTimeout("calculateMove(8,0,y,2),calculateMove(8,0,y,1)", 75);
-                                E = 1 - G | A < 7 | D | !maxDepth | R | o < maxMoves || calculateMove(playerColor, 0) > 1e4;
-                                boardState[O] = o;
-                                boardState[T] = R;
-                                boardState[D] = boardState[g];
-                                D ? boardState[g] = G ? 0 : 9 ^ playerColor : 0;
+                    targetPiece = boardState[currentPosition += pieceCodes[pieceCode]];
+                    moveAdjustment = targetPosition = pieceType | currentPosition + moveDirection - lastPosition ? 0 : lastPosition;
+                    if (!targetPiece && (pieceType || moveType < 3 || moveAdjustment) || (1 + targetPiece & maxMoves ^ playerColor) > 9 && pieceType | moveType > 2) {
+                        if (!(2 - targetPiece & 7)) return evaluationConstant;
+                        for (nextMove = validMoves = pieceType | boardState[currentPosition - moveDirection] - 7 ? currentPiece & maxMoves : 6 ^ playerColor; nextMove; nextMove = !nextMove && !forcedMove && !(moveAdjustment = currentPosition, targetPosition = currentPosition < boardIndex ? moveAdjustment - 3 : moveAdjustment + 2, boardState[targetPosition] < maxMoves | boardState[targetPosition + boardIndex - currentPosition] | boardState[currentPosition += currentPosition - boardIndex])) {
+                            moveScore = (targetPiece && pieceCodes[targetPiece & 7 | 32] * 2 - depth - pieceType) + (pieceType ? 0 : validMoves - currentPiece & maxMoves ? 110 : (targetPosition && 14) + (moveType < 2) + 1);
+                            if (maxDepth > depth || 1 < maxDepth & maxDepth == depth && moveScore > 2 | forcedMove) {
+                                boardState[currentPosition] = validMoves, boardState[moveAdjustment] = boardState[targetPosition], boardState[boardIndex] = targetPosition ? boardState[targetPosition] = 0 : 0;
+                                moveScore -= calculateMove(playerColor, depth + 1, nextMove = pieceType | moveType > 1 ? 0 : currentPosition, maxDepth, moveScore - maxScore);
+                                if (!(depth || maxDepth - 1 | cellPosition - boardIndex | currentPosition - previousPosition | moveScore < -1e4)) return renderBoard(y = nextMove), playerColor && setTimeout("calculateMove(8,0,y,2),calculateMove(8,0,y,1)", 75);
+                                nextMove = 1 - pieceType | moveType < 7 | targetPosition | !maxDepth | targetPiece | currentPiece < maxMoves || calculateMove(playerColor, 0) > 1e4;
+                                boardState[boardIndex] = currentPiece;
+                                boardState[currentPosition] = targetPiece;
+                                boardState[targetPosition] = boardState[moveAdjustment];
+                                targetPosition ? boardState[moveAdjustment] = pieceType ? 0 : 9 ^ playerColor : 0;
                             }
-                            if (L > N || !depth & L == N && Math.random() < .5) if (N = L, maxDepth > 1) if (depth ? evaluation - L < 0 : (cellIndex = O, b = T, 0)) return N;
+                            if (moveScore > maxScore || !depth & moveScore == maxScore && Math.random() < .5) if (maxScore = moveScore, maxDepth > 1) if (depth ? evaluation - moveScore < 0 : (cellPosition = boardIndex, previousPosition = currentPosition, 0)) return maxScore;
                         }
                     }
-                } while (!R & G > 2 || (T = O, G | A > 2 | maxMoves < o & !R && ++C * --A));
+                } while (!targetPiece & pieceType > 2 || (currentPosition = boardIndex, pieceType | moveType > 2 | maxMoves < currentPiece & !targetPiece && ++pieceCode * --moveType));
             }
         }
-        return -K + 768 < N | d && N;
+        return -evaluationConstant + 768 < maxScore | forcedMove && maxScore;
     }
+    
 
     // Step 4: Render the Board
     function renderBoard() {
         let i = "<table>";
-        for (u = 18; u < 98; document.body.innerHTML = i += ++u % boardSize - 9 ? "<th width=60 height=60 onclick='boardState[b=" + u + "]&8?renderBoard():calculateMove(0,0,y,1)' style='font-size:50px' bgcolor=#" + (u - cellIndex ? u * .9 & 1 || 9 : "d") + "0f0e0>&#" + (boardState[u] & 15 ? 9808 + pieceCodes[67 + (boardState[u] & 15)] : 160) + ";" : u++ && "<tr>") cellIndex = b;
+        for (u = 18; u < 98; document.body.innerHTML = i += ++u % boardSize - 9 ? "<th width=60 height=60 onclick='boardState[previousPosition=" + u + "]&8?renderBoard():calculateMove(0,0,y,1)' style='font-size:50px' bgcolor=#" + (u - cellPosition ? u * .9 & 1 || 9 : "forcedMove") + "0f0e0>&#" + (boardState[u] & 15 ? 9808 + pieceCodes[67 + (boardState[u] & 15)] : 160) + ";" : u++ && "<tr>") cellPosition = previousPosition;
     }
 
     // Initial rendering of the board
