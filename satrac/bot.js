@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satranç Oyunu</title>
-</head>
-
-<body>
-
-    <script>
         // Generate piece codes from a given string (for internal piece representation)
         function generatePieceCodesFromString(inputString) {
             const codes = [];
@@ -129,7 +117,7 @@
         // Step 3: Game Evaluation Logic (Minimax)
         function calculateMove(playerColor, depth, lastPosition, maxDepth, evaluation) {
             playerColor ^= 8;
-            console.log("boardState:", boardState)
+            //console.log("boardState:", boardState)
             for (
                 var currentPosition,
                 currentPiece,
@@ -164,7 +152,18 @@
                                     applyMove(boardIndex, currentPosition, validMoves, targetPiece, moveAdjustment, targetPosition)
 
                                     moveScore -= calculateMove(playerColor, depth + 1, nextMove = pieceType | moveType > 1 ? 0 : currentPosition, maxDepth, moveScore - maxScore);
-                                    if (!(depth || maxDepth - 1 | cellPosition - boardIndex | currentPosition - previousPosition | moveScore < -1e4)) return renderBoard(y = nextMove), playerColor && setTimeout("calculateMove(8,0,y,2),calculateMove(8,0,y,1)", 75);
+                                        
+                                        
+if (!(depth || maxDepth - 1 | currentPosition - boardIndex | moveScore < -1e4)) {
+    return renderBoard((y = nextMove)),
+        playerColor &&
+        setTimeout(() => {
+            calculateMove(8, 0, y, 2);
+            calculateMove(8, 0, y, 1);
+        }, 75);
+}
+
+                                        
                                     nextMove = 1 - pieceType | moveType < 7 | targetPosition | !maxDepth | targetPiece | currentPiece < maxMoves || calculateMove(playerColor, 0) > 1e4;
                                     revertMove(boardIndex, currentPiece, currentPosition, targetPiece, targetPosition, moveAdjustment, pieceType)
                                 }
@@ -179,18 +178,44 @@
         }
 
 
-        // Step 4: Render the Board
-        function renderBoard() {
-            let i = "<table>";
-            for (u = 18; u < 98; document.body.innerHTML = i += ++u % boardSize - 9 ? "<th width=60 height=60 onclick='boardState[previousPosition=" + u + "]&8?renderBoard():calculateMove(0,0,y,1)' style='font-size:50px' bgcolor=#" + (u - cellPosition ? u * .9 & 1 || 9 : "forcedMove") + "0f0e0>&#" + (boardState[u] & 15 ? 9808 + pieceCodes[67 + (boardState[u] & 15)] : 160) + ";" : u++ && "<tr>") cellPosition = previousPosition;
-        }
-
-        // Initial rendering of the board
-        renderBoard();
-
-    </script>
+// Step 4: Render the Board
+function renderBoard() {
+    console.log("Chessboard (12x10):");
+    for (let i = 0; i < 12; i++) {
+        let row = boardState.slice(i * 10, i * 10 + 10);
+        console.log(row.map(cell => (cell === 7 ? "##" : cell.toString().padStart(2, " "))).join(" "));
+    }
+}
 
 
-</body>
+// Step 1: Input the Board State
+const inputBoardState = [
+    7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+    7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+    7, 53, 51, 52,  53, 50, 52, 51, 53, 7,
+    7, 49, 49,  11, 49,  0,  0, 49,  0, 7,
+    7,  0,  0,  1,  0,  0,  0,  0,  0, 7,
+    7,  0,  0,  0,  0,  1,  1,  0,  1, 7,
+    7,  0,  0,  0,  0,  0,  0,  0,  0, 7,
+    7,  0,  0,  0,  0,  0,  9,  0, 11, 7,
+    7, 57, 57, 57, 57, 57,  0, 57, 57, 7,
+    7, 61,  0, 60, 62, 58, 60,  0, 61, 7,
+    7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+    7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+];
 
-</html>
+// Step 2: Update Global Board State
+boardState = inputBoardState.slice(); // Copy input state into global boardState
+
+renderBoard(); // Display updated board
+// Step 3: Black's Turn (Calculate the Best Move)
+function playBlackTurn() {
+    console.log("Black's Turn: Calculating the best move...");
+    calculateMove(8, 0, 0, 2, 0); // Black's color (8), depth 0, initial settings
+
+    console.log("Board After Black's Move:");
+    renderBoard(); // Display updated board
+}
+
+// Play Black's Turn
+playBlackTurn();

@@ -1,6 +1,9 @@
 # Veri Bilimi Kursu
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 - [Veri Bilimi Kursu](#veri-bilimi-kursu)
@@ -14,7 +17,6 @@
   - [Unite 4 Veri Görselleştirme ve İş Zekası](#unite-4-veri-görselleştirme-ve-i̇ş-zekası)
   - [Contributors ✨](#contributors-)
 
-
 ## Unite 1 Ortamın Kurulması
 
 - [x] [Git ve Github Kurulumu](https://www.youtube.com/watch?v=mHP2YnD9J-U)
@@ -22,7 +24,6 @@
 - [x] [Virtual Box üzerine Linux Lite kurulumu](./ekler/virtualbox_kurulum.md)
 - [x] [Vs Code Programının indirilmesi ve Senkronizasyon ayarları](./ekler/vscode_eklentiler.md)
 - [x] [Docker ve Docker Compose Kurulumu](./ekler/docker_kurulum.md)
-
 
 ## Unite 2 SQL ve Veri Tabanları
 
@@ -37,7 +38,7 @@
 - [x] [SQL'de Hesaplama - Gruplama İşlemleri](https://youtube.com/watch?v=SNJy_38C7Bg&si=EnSIkaIECMiOmarE)
 - [x] [SQL'de Hazır Fonksiyonlar](https://youtube.com/watch?v=MDmJUMt_19o&si=EnSIkaIECMiOmarE)
 - [x] [SQL'de Tablo Oluşturma](https://youtube.com/watch?v=JeSKgXkCTHU&si=EnSIkaIECMiOmarE)
-- [x] [SQL'de CTE(common table expression) Nedir ve Nasıl kullanılır?](https://youtube.com/watch?v=JeSKgXkCTHU&si=EnSIkaIECMiOmarE) 
+- [x] [SQL'de CTE(common table expression) Nedir ve Nasıl kullanılır?](https://youtube.com/watch?v=JeSKgXkCTHU&si=EnSIkaIECMiOmarE)
 
 ## Unite 3 Python Ile Programlama
 
@@ -58,6 +59,7 @@
 - [x] [Python Classes & Objects - Sınıflar ve Objeler](https://youtu.be/7TY9BDKhmFg?si=ry4MXaKCPh0yYr3O)
 
 ### Bölüm 2 Veri Dönüştürme
+
 - [ ] [İstatistiksel Bakış]()
   - [ ] Combinatorics
   - [ ] Probability Theory
@@ -87,7 +89,7 @@
 
 ### Bölüm 4 Büyük Veri ile İşlemler: PySpark - Dask - Pandas
 
-- [ ] [Pandas, PySpark, Dask Farkı]()
+- [x] [Pandas, PySpark, Dask Farkı]()
 - [ ] [PySpark Kurulumu]()
 - [ ] [PySpark İle Veri Temizleme ve Manupülasyon]()
 - [ ] [Dask Kurulumu]()
@@ -101,13 +103,12 @@
 - [x] [Power Bı ile Veri Görselleştirme](https://www.youtube.com/watch?v=qcB75opF9rg&list=PLanC6OPLYlCYW_hLru-GZcfgMHaaIoe-b&index=35)
 - [x] [Apache Superset Veri Görselleştirme](https://www.youtube.com/watch?v=7zfnaVVue9Y)
 
-
 ---
-
 
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
