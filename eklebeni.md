@@ -11,14 +11,14 @@ Onur Mert Ertugrul
 Sedatcan Kalkan  
 R Emrah Gökkaya  
 hakan  
-Burak Ekin
+Burak Ekin  
 Tunahan Yılmaz  
 Hüseyin Çoban  
-Jacob Kaya
-Elif Keskin
+Jacob Kaya  
+Elif Keskin  
 Esra TUNÇ  
-Serap Doğan
-Ender Özlü
-Sultan ÇALIK
-Mert Gayretli
-
+Serap Doğan  
+Ender Özlü  
+Sultan ÇALIK  
+Mert Gayretli  
+Hilmi  
