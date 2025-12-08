@@ -1,7 +1,7 @@
 # Veri Bilimi Kursu
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 - [Veri Bilimi Kursu](#veri-bilimi-kursu)
@@ -141,6 +141,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hilmidmrr"><img src="https://avatars.githubusercontent.com/u/77290556?v=4?s=100" width="100px;" alt="hilmidmrr"/><br /><sub><b>hilmidmrr</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3Ahilmidmrr" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=hilmidmrr" title="Code">💻</a> <a href="#data-hilmidmrr" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/toto679"><img src="https://avatars.githubusercontent.com/u/204904610?v=4?s=100" width="100px;" alt="toto679"/><br /><sub><b>toto679</b></sub></a><br /><a href="https://github.com/m-karakus/veri-bilimi-kursu/issues?q=author%3Atoto679" title="Bug reports">🐛</a> <a href="https://github.com/m-karakus/veri-bilimi-kursu/commits?author=toto679" title="Code">💻</a> <a href="#data-toto679" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
